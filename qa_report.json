@@ -1,0 +1,22 @@
+{
+  "version": "v42",
+  "scope": "Image integrity correction only",
+  "missing_local_assets": [],
+  "homepage_visible_local_image_duplicates": {},
+  "homepage_visible_local_images": [
+    "assets/home-local/img-c7d77cbcfc.webp",
+    "assets/home-local/img-98e7a806a8.webp",
+    "assets/home-local/img-281bcea047.webp",
+    "assets/flow-real-world.webp",
+    "assets/stay-team-new.webp",
+    "assets/command-gate.webp",
+    "assets/flow-system.webp",
+    "assets/flow-new-1.webp",
+    "assets/command-center.webp",
+    "assets/flow-new-2.webp"
+  ],
+  "homepage_product_area_external_images": [],
+  "hero_bright_visual_refs": 2,
+  "hero_dark_visual_refs": 1,
+  "unchanged_files_from_v41": []
+}

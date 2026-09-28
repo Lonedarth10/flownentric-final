@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#111111" name="theme-color"/>
+<meta content="Nentric Technologies builds intelligent systems for people, places and the things that move between them." name="description"/>
+<title>Nentric Technologies Ltd</title>
+<link id="themeFavicon" rel="icon" type="image/png" sizes="64x64" href="assets/favicon-orange.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link as="image" fetchpriority="high" href="assets/flow-real-world.webp" rel="preload"/>
+<script>(function(){try{var d=localStorage.getItem('nentric-theme')==='dark';if(d)document.documentElement.classList.add('nentric-dark-preload');var f=document.getElementById('themeFavicon');if(f)f.href='assets/favicon-orange.png';}catch(e){}})();</script>
+<style id="dark-preload-home">
+html.nentric-dark-preload body{background:#080909!important;color:#f7f5f0!important}
+html.nentric-dark-preload .site-nav{background:rgba(18,18,18,.62)!important;border-color:rgba(255,255,255,.13)!important;color:#fff!important}
+html.nentric-dark-preload .nav-links a{color:#eee!important}
+html.nentric-dark-preload .nav-cta{background:#fff!important;color:#111!important}
+html.nentric-dark-preload .brand-wordmark{content:url('assets/nentric_wordmark_dark.png')!important}
+</style>
+<style>
+
+  :root{
+    --sunfire:#FF5A00;
+    --vermilion:#FF2D00;
+    --amber:#FFB43D;
+    --bone:#FFF4E6;
+    --onyx:#111111;
+    --ink:#171717;
+    --muted:#6E6E6E;
+    --line:rgba(17,17,17,.10);
+    --glass:rgba(255,255,255,.48);
+    --glass-dark:rgba(17,17,17,.50);
+    --shadow:0 20px 70px rgba(17,17,17,.10);
+    --radius:28px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:#f7f6f2;
+    color:var(--onyx);
+    font-family:'Space Grotesk',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  button,input,textarea{font:inherit}
+  button{cursor:pointer}
+  img{display:block;max-width:100%}
+
+  .shell{width:min(1180px,calc(100% - 40px));margin:0 auto}
+
+  .site-nav{
+    position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:50;
+    width:min(1180px,calc(100% - 32px));
+    display:flex;align-items:center;justify-content:space-between;
+    padding:11px 13px 11px 18px;
+    border:1px solid rgba(255,255,255,.42);
+    background:rgba(255,255,255,.60);
+    backdrop-filter:blur(18px) saturate(125%);
+    -webkit-backdrop-filter:blur(18px) saturate(125%);
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.07);
+  }
+  .brand-lockup{display:flex;align-items:center;gap:11px;min-width:0}
+  .brand-mark{width:33px;height:33px;object-fit:contain}
+  .brand-word{font-size:14px;letter-spacing:.24em;font-weight:600;white-space:nowrap}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{font-size:14px;font-weight:500;color:#252525;transition:opacity .2s ease}
+  .nav-links a:hover{opacity:.62}
+  .nav-cta{
+    border:0;border-radius:13px;padding:11px 16px;font-weight:600;font-size:13px;
+    background:var(--onyx);color:#fff;transition:transform .2s ease,background .2s ease;
+  }
+  .nav-cta:hover{transform:translateY(-1px);background:#000}
+
+  .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:140px 0 85px}
+  .hero::before{content:"";position:absolute;inset:-20%;background:
+    radial-gradient(circle at 76% 30%,rgba(255,90,0,.34),transparent 24%),
+    radial-gradient(circle at 32% 65%,rgba(255,180,61,.16),transparent 26%),
+    linear-gradient(130deg,#f7f6f2 0%,#fff7ec 55%,#f3f1eb 100%);z-index:-3}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:58px;align-items:center}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#555;margin-bottom:24px}
+  .hero h1{font-size:clamp(58px,7.7vw,112px);line-height:.90;letter-spacing:-.07em;margin:0;max-width:820px;font-weight:500}
+  .hero h1 span{display:block}
+  .hero h1 .accent{background:linear-gradient(90deg,var(--sunfire),var(--vermilion));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-copy{max-width:610px;font-size:18px;color:#444;margin:30px 0 28px}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{border:0;border-radius:14px;padding:14px 18px;font-size:14px;font-weight:600;transition:all .2s ease}
+  .btn-primary{background:var(--onyx);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(17,17,17,.18)}
+  .btn-secondary{background:rgba(255,255,255,.62);border:1px solid rgba(17,17,17,.10);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}
+  .btn-secondary:hover{background:#fff}
+
+  .hero-visual{position:relative;min-height:500px}
+  .hero-card{position:absolute;border-radius:32px;box-shadow:var(--shadow);overflow:hidden}
+  .hero-main-card{inset:20px 12px 40px 25px;background:linear-gradient(145deg,#1a1a1a,#0f0f0f 55%,#2a130c);color:#fff;padding:38px;display:flex;flex-direction:column;justify-content:space-between}
+  .hero-main-card .topline{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.72}
+  .hero-main-card h2{font-size:52px;line-height:.95;letter-spacing:-.05em;margin:70px 0 20px;font-weight:500}
+  .hero-main-card p{max-width:310px;color:rgba(255,255,255,.65);font-size:15px}
+  .hero-chip{position:absolute;right:0;top:0;width:190px;padding:18px;border-radius:24px;background:rgba(255,255,255,.68);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.65);box-shadow:var(--shadow)}
+  .hero-chip .mini-mark{width:58px;height:58px;margin-bottom:12px}
+  .hero-chip strong{display:block;font-size:14px;margin-bottom:6px}
+  .hero-chip span{display:block;color:#555;font-size:12px}
+  .hero-orb{position:absolute;left:-12px;bottom:0;width:150px;height:150px;border-radius:50%;background:linear-gradient(145deg,var(--sunfire),var(--vermilion));filter:blur(.2px);box-shadow:0 30px 80px rgba(255,90,0,.34)}
+
+  .intro{padding:110px 0 55px}
+  .intro-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:start}
+  .display{font-size:clamp(36px,4.8vw,67px);line-height:.98;letter-spacing:-.05em;font-weight:500;margin:0}
+  .intro-copy{font-size:18px;color:#4d4d4d;max-width:690px}
+  .accent-line{width:92px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--sunfire),var(--vermilion));margin:28px 0}
+
+  .ribbon{padding:18px 0 72px;overflow:hidden}
+  .ribbon-track{display:flex;gap:15px;width:max-content;animation:drift 22s linear infinite}
+  .ribbon-item{display:flex;align-items:center;gap:18px;font-size:14px;color:#5e5e5e;white-space:nowrap}
+  .ribbon-dot{width:8px;height:8px;background:var(--sunfire);border-radius:50%}
+  @keyframes drift{to{transform:translateX(-34%)}}
+
+  .section{padding:100px 0}
+  .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:44px}
+  .section-head h2{font-size:clamp(40px,5vw,72px);letter-spacing:-.055em;line-height:.95;margin:0;font-weight:500;max-width:760px}
+  .section-head p{max-width:360px;color:#616161;margin:0;font-size:16px}
+
+  .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .product-card{position:relative;border-radius:30px;min-height:430px;padding:26px;overflow:hidden;border:1px solid rgba(17,17,17,.08);background:#fff;transition:transform .25s ease,box-shadow .25s ease}
+  .product-card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(17,17,17,.10)}
+  .product-card::after{content:"";position:absolute;inset:auto -25% -45% 25%;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,0,.20),transparent 68%);pointer-events:none}
+  .product-top{display:flex;justify-content:space-between;align-items:start}
+  .product-name{font-size:28px;letter-spacing:-.04em;font-weight:500}
+  .product-badge{font-size:11px;border:1px solid rgba(17,17,17,.10);border-radius:999px;padding:7px 9px;color:#5d5d5d;background:#fafafa}
+  .product-card p{font-size:16px;color:#585858;max-width:290px;margin-top:22px}
+  .product-open{position:absolute;left:26px;bottom:24px;border:0;background:none;padding:0;font-weight:600;font-size:14px}
+  .product-visual{position:absolute;right:0;bottom:0;width:58%;height:52%;border-top-left-radius:36px;background:linear-gradient(145deg,#fff3e7,#ffffff);border-top:1px solid rgba(255,90,0,.14);border-left:1px solid rgba(255,90,0,.12);display:grid;place-items:center}
+  .product-flow .product-visual{background:linear-gradient(145deg,#fff3e7,#fff)}
+  .product-command .product-visual{background:linear-gradient(145deg,#191919,#2b180f)}
+  .product-stay .product-visual{background:linear-gradient(145deg,#efece5,#fff)}
+  .visual-mark{width:110px;height:110px;object-fit:contain;filter:drop-shadow(0 20px 35px rgba(255,90,0,.18))}
+  .command-orbit{width:150px;height:150px;border-radius:50%;border:1px solid rgba(255,255,255,.22);position:relative}
+  .command-orbit::before,.command-orbit::after{content:"";position:absolute;inset:18px;border-radius:50%;border:1px dashed rgba(255,255,255,.15)}
+  .command-orbit::after{inset:48px;border-color:rgba(255,90,0,.55)}
+  .stay-home{width:140px;height:110px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(17,17,17,.08);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);box-shadow:0 18px 45px rgba(17,17,17,.10);position:relative}
+  .stay-home::before{content:"";position:absolute;left:25px;right:25px;top:30px;height:50px;border-radius:14px 14px 18px 18px;background:linear-gradient(180deg,#fff,#f1ede4)}
+  .stay-home::after{content:"";position:absolute;left:60px;top:54px;width:20px;height:28px;border-radius:7px;background:var(--sunfire)}
+
+  .system-section{padding:120px 0;background:#101010;color:#fff;position:relative;overflow:hidden}
+  .system-section::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,0,.28),transparent 65%);right:-260px;top:60px}
+  .system-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;position:relative}
+  .system-section .eyebrow{color:rgba(255,255,255,.50)}
+  .system-section .display{color:#fff}
+  .system-copy{color:rgba(255,255,255,.64);font-size:17px;max-width:520px}
+  .system-stage{min-height:420px;border-radius:34px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);position:relative;overflow:hidden}
+  .stage-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.75),transparent)}
+  .stage-node{position:absolute;width:88px;height:88px;border-radius:22px;display:grid;place-items:center;font-size:12px;font-weight:600;text-align:center;letter-spacing:.02em;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .node-a{left:9%;top:16%}.node-b{right:8%;top:26%}.node-c{left:12%;bottom:13%}.node-d{right:13%;bottom:17%}.node-core{left:50%;top:49%;transform:translate(-50%,-50%);width:118px;height:118px;border-radius:50%;background:linear-gradient(145deg,var(--sunfire),var(--vermilion));border:0;color:#fff;box-shadow:0 24px 60px rgba(255,90,0,.28)}
+  .stage-line{position:absolute;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,90,0,.60),rgba(255,255,255,.08));transform-origin:left center}
+  .line-1{left:23%;top:30%;width:31%;transform:rotate(21deg)}
+  .line-2{left:56%;top:34%;width:25%;transform:rotate(-17deg)}
+  .line-3{left:27%;top:64%;width:27%;transform:rotate(-15deg)}
+  .line-4{left:57%;top:63%;width:23%;transform:rotate(15deg)}
+
+  .stories{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .story{min-height:0;height:520px;border-radius:30px;position:relative;overflow:hidden;padding:0;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid rgba(17,17,17,.12);background:#fff}
+  .story-light{background:#fff;color:#151515}
+  .story-dark{background:#101010;color:#fff;border-color:rgba(255,255,255,.20)}
+  .story-media{position:relative;flex:0 0 57%;min-height:0;overflow:hidden;background:#181818}
+  .story-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+  .story-media::after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(0,0,0,.36));pointer-events:none}
+  .story-copy{flex:1;min-height:0;padding:27px 30px 30px;display:flex;flex-direction:column;justify-content:center}
+  .story h3{font-size:34px;line-height:1;letter-spacing:-.045em;margin:0 0 13px;max-width:560px;font-weight:500}
+  .story p{margin:0;color:#5e5e5e;max-width:520px;font-size:16px;line-height:1.55}
+  .story-dark p{color:rgba(255,255,255,.62)}
+  .story-dark .story-copy{background:#101010}
+  .story-art{position:relative;inset:auto;width:100%;height:100%;border:0;border-radius:0;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;display:block}
+  .story-art .visual-mark{width:98px;height:98px}
+  .story-lines{width:130px;height:130px;border-radius:50%;border:1px solid rgba(255,90,0,.45);position:relative}
+  .story-lines::before,.story-lines::after{content:"";position:absolute;border:1px solid rgba(255,90,0,.28);border-radius:50%}
+  .story-lines::before{inset:18px}.story-lines::after{inset:38px}
+  body.dark-theme .story-light{background:#151515;color:#fff;border-color:rgba(255,255,255,.20)}
+  body.dark-theme .story-light .story-copy{background:#151515}
+
+  .interactive{padding:110px 0}
+  .explorer{display:grid;grid-template-columns:.72fr 1.28fr;gap:18px}
+  .explorer-nav{display:flex;flex-direction:column;gap:10px}
+  .explorer-tab{border:1px solid rgba(17,17,17,.10);background:#fff;border-radius:20px;padding:22px;text-align:left;transition:.2s ease}
+  .explorer-tab strong{display:block;font-size:20px;font-weight:600}
+  .explorer-tab span{display:block;margin-top:5px;font-size:13px;color:#666}
+  .explorer-tab.active{background:var(--onyx);color:#fff;border-color:var(--onyx)}
+  .explorer-tab.active span{color:rgba(255,255,255,.55)}
+  .explorer-view{border-radius:32px;min-height:435px;overflow:hidden;padding:34px;position:relative;background:linear-gradient(145deg,#fff6eb,#fff)}
+  .explorer-view.command{background:linear-gradient(145deg,#151515,#25150e);color:#fff}
+  .explorer-view.stay{background:linear-gradient(145deg,#efebe2,#fff)}
+  .explorer-view h3{margin:0;font-size:44px;letter-spacing:-.05em;font-weight:500}
+  .explorer-view p{max-width:520px;font-size:16px;line-height:1.55;color:#595959;margin-top:16px}
+  .explorer-view.command p{color:rgba(255,255,255,.62)}
+  .explorer-scene{position:absolute;right:28px;bottom:25px;width:48%;height:52%;border-radius:28px;background:rgba(255,255,255,.52);border:1px solid rgba(17,17,17,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:center}
+  .explorer-view.command .explorer-scene{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
+  .scene-stack{width:180px;display:grid;gap:10px}
+  .scene-card{height:52px;border-radius:16px;border:1px solid rgba(17,17,17,.07);background:rgba(255,255,255,.74);display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:12px;color:#3e3e3e}
+  .command .scene-card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.08);color:#fff}
+  .scene-pill{width:38px;height:8px;border-radius:8px;background:var(--sunfire)}
+
+  .principles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .principle{padding:25px;border-radius:24px;border:1px solid rgba(17,17,17,.08);background:rgba(255,255,255,.52);min-height:180px}
+  .principle strong{font-size:16px;display:block;margin-bottom:16px;font-weight:600}
+  .principle p{margin:0;font-size:14px;color:#666}
+  .principle-mark{width:20px;height:20px;border-radius:6px;background:linear-gradient(145deg,var(--sunfire),var(--vermilion));margin-bottom:20px}
+
+  .contact{padding:120px 0 90px;background:linear-gradient(180deg,#ecebe7,#f7f6f2)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .contact-copy{padding:32px 8px}
+  .contact-copy h2{font-size:clamp(46px,6vw,80px);line-height:.93;letter-spacing:-.06em;margin:0 0 20px;font-weight:500}
+  .contact-copy p{font-size:18px;color:#5c5c5c;max-width:520px}
+  .contact-meta{margin-top:45px;display:grid;gap:14px}
+  .meta-row{display:flex;gap:18px;align-items:center}
+  .meta-icon{width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid rgba(17,17,17,.08);display:grid;place-items:center;font-size:15px}
+  .meta-row strong{display:block;font-size:13px}.meta-row span{font-size:14px;color:#666}
+  .contact-card{border-radius:32px;padding:28px;background:rgba(255,255,255,.52);backdrop-filter:blur(22px) saturate(130%);-webkit-backdrop-filter:blur(22px) saturate(130%);border:1px solid rgba(255,255,255,.68);box-shadow:0 24px 70px rgba(17,17,17,.08)}
+  .contact-card h3{margin:0 0 20px;font-size:25px;font-weight:500;letter-spacing:-.03em}
+  .field{display:grid;gap:8px;margin-bottom:14px}
+  .field label{font-size:12px;color:#5e5e5e}
+  .field input,.field textarea{width:100%;border-radius:15px;border:1px solid rgba(17,17,17,.10);background:rgba(255,255,255,.70);padding:13px 14px;outline:none;transition:border .2s ease,background .2s ease}
+  .field textarea{min-height:120px;resize:vertical}
+  .field input:focus,.field textarea:focus{border-color:rgba(255,90,0,.65);background:#fff}
+  .form-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:6px}
+  .form-note{font-size:11px;color:#777;max-width:220px}
+  .success{margin-top:12px;font-size:13px;color:#7c3500;display:none}
+
+  footer{padding:30px 0 48px;background:#f7f6f2;border-top:1px solid var(--line)}
+  .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:end}
+  .footer-left p{margin:10px 0 0;color:#707070;font-size:13px}
+  .footer-right{display:flex;gap:25px;font-size:13px;color:#555}
+
+  .reveal{opacity:1;transform:none;transition:none}.reveal.visible{opacity:1;transform:none}
+  .cursor-glow{position:fixed;pointer-events:none;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,0,.10),transparent 68%);transform:translate(-50%,-50%);z-index:-1;mix-blend-mode:multiply}
+
+  @media (max-width:950px){
+    .nav-links{display:none}
+    .hero-grid,.intro-grid,.system-inner,.explorer,.contact-grid{grid-template-columns:1fr}
+    .hero{padding-top:130px}
+    .hero-visual{min-height:440px}
+    .products{grid-template-columns:1fr}
+    .principles{grid-template-columns:1fr 1fr}
+    .section-head{align-items:start;flex-direction:column}
+    .stories{grid-template-columns:1fr}
+    .story{min-height:420px}
+  }
+  @media (max-width:620px){
+    .shell{width:min(100% - 24px,1180px)}
+    .site-nav{width:calc(100% - 20px);top:10px}
+    .brand-word{font-size:12px;letter-spacing:.18em}
+    .nav-cta{padding:10px 12px;font-size:12px}
+    .hero{padding-bottom:50px}
+    .hero h1{font-size:clamp(48px,14vw,82px)}
+    .hero-copy{font-size:16px}
+    .hero-main-card{inset:14px 0 20px 8px;padding:28px}
+    .hero-main-card h2{font-size:42px;margin-top:80px}
+    .hero-chip{width:160px}
+    .intro,.section,.interactive,.contact{padding:82px 0}
+    .display{font-size:40px}
+    .principles{grid-template-columns:1fr}
+    .stories{grid-template-columns:1fr}
+    .story{min-height:390px}
+    .explorer-view{min-height:520px}
+    .explorer-scene{position:relative;right:auto;bottom:auto;margin-top:32px;width:100%;height:180px}
+    .form-foot{align-items:flex-start;flex-direction:column}
+    .footer-inner{align-items:flex-start;flex-direction:column}
+    .footer-right{flex-wrap:wrap}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .ribbon-track{animation:none}
+    .reveal{transition:none}
+  }
+
+  /* NENTRIC PREMIUM LAYER */
+  :root{
+    --page:#f5f3ee;
+    --surface:rgba(255,255,255,.58);
+    --surface-strong:rgba(255,255,255,.78);
+    --text:#111;
+    --muted2:#5f5f5f;
+    --glass-border:rgba(255,255,255,.62);
+    --glass-shadow:0 24px 80px rgba(17,17,17,.12);
+  }
+  body{background:var(--page);color:var(--text);transition:background .45s ease,color .45s ease}
+  .nav-actions{display:flex;align-items:center;gap:10px}
+  .theme-toggle{display:flex;align-items:center;gap:6px;height:38px;padding:5px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.42);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 10px 28px rgba(0,0,0,.06);color:var(--text)}
+  .theme-icon{font-size:13px;line-height:1;opacity:.55}
+  .theme-track{width:42px;height:22px;border-radius:999px;background:rgba(17,17,17,.12);padding:3px;display:flex;align-items:center}
+  .theme-knob{width:16px;height:16px;border-radius:50%;background:#111;display:block;transition:transform .3s ease,background .3s ease;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+  .theme-toggle[aria-pressed="true"] .theme-knob{transform:translateX(20px);background:var(--sunfire)}
+  .hero-main-card{isolation:isolate}
+  .hero-photo{position:absolute;inset:0;background-image:url('assets/home-local/hero-bright-upload.png');background-size:cover;background-position:center;z-index:-3;transform:scale(1.02)}
+  .hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,8,8,.92) 0%,rgba(8,8,8,.64) 48%,rgba(8,8,8,.28) 100%);z-index:-2}
+  .hero-main-copy{position:relative;z-index:2}
+  .glass-kicker{display:inline-flex;padding:7px 10px;border:1px solid rgba(255,255,255,.20);border-radius:999px;background:rgba(255,255,255,.09);backdrop-filter:blur(14px);font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.74)}
+  .hero-main-card h2{font-size:clamp(48px,4vw,66px)}
+  .hero-main-card p{color:rgba(255,255,255,.78)}
+  .hero-chip,.btn-secondary,.product-card,.story-art,.explorer-tab,.principle,.contact-card,.system-stage,.explorer-scene{box-shadow:var(--glass-shadow)}
+  .product-card{background:var(--surface);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%);border-color:var(--glass-border)}
+  .product-card .product-visual{width:64%;height:58%;overflow:hidden;background:#222}
+  .product-photo{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease}
+  .product-card:hover .product-photo{transform:scale(1.07)}
+  .product-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(0,0,0,.55));pointer-events:none}
+  .image-glass-label{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:8px 10px;border:1px solid rgba(255,255,255,.26);border-radius:999px;background:rgba(15,15,15,.28);backdrop-filter:blur(12px)}
+  .product-flow .product-visual,.product-stay .product-visual,.product-command .product-visual{border:0;border-radius:30px 0 0 0}
+  .product-command .product-visual{background:#151515}
+  .product-command .product-visual .image-glass-label{color:#fff}
+  .product-deep-grid{display:grid;gap:18px;margin-top:24px}
+  .deep-card{display:grid;grid-template-columns:.9fr 1.1fr;min-height:420px;border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.58);background:var(--surface);backdrop-filter:blur(24px) saturate(135%);-webkit-backdrop-filter:blur(24px) saturate(135%);box-shadow:var(--glass-shadow)}
+  .deep-card:nth-child(even){grid-template-columns:1.1fr .9fr}
+  .deep-card:nth-child(even) .deep-image{order:2}
+  .deep-image{min-height:100%;position:relative;overflow:hidden}
+  .deep-image img{width:100%;height:100%;min-height:420px;object-fit:cover;transition:transform .7s ease}
+  .deep-card:hover .deep-image img{transform:scale(1.04)}
+  .deep-image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.05),rgba(0,0,0,.34))}
+  .deep-content{padding:48px 46px;display:flex;flex-direction:column;justify-content:center}
+  .deep-index{font-size:10px;letter-spacing:.18em;color:var(--sunfire);font-weight:700}
+  .deep-content h3{font-size:clamp(32px,3.3vw,56px);line-height:.97;letter-spacing:-.055em;margin:18px 0}
+  .deep-content p{font-size:16px;color:var(--muted2);max-width:590px}.deep-command .deep-content{color:var(--text)}.deep-command .deep-content p{color:var(--muted2)}
+  .deep-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+  .deep-points span{font-size:11px;padding:9px 11px;border:1px solid rgba(17,17,17,.09);background:rgba(255,255,255,.52);border-radius:999px}
+  .system-stage{isolation:isolate}
+  .system-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;z-index:-3}
+  .system-photo-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,5,5,.92),rgba(5,5,5,.60) 55%,rgba(255,90,0,.16));z-index:-2}
+  .story{box-shadow:var(--glass-shadow);border:1px solid rgba(255,255,255,.58)}
+  .story-light{background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(238,234,226,.78));backdrop-filter:blur(20px)}
+  .story-dark{background:linear-gradient(145deg,rgba(19,19,19,.96),rgba(15,15,15,.78));backdrop-filter:blur(20px)}
+  .story-photo{width:260px;height:220px;overflow:hidden;background:#222;border:1px solid rgba(255,255,255,.25)}
+  .story-photo img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+  .story:hover .story-photo img{transform:scale(1.05)}
+  .story-photo-glass{position:absolute;left:12px;bottom:12px;right:12px;padding:8px 10px;border-radius:12px;background:rgba(10,10,10,.34);color:#fff;font-size:9px;letter-spacing:.12em;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.22)}
+  .explorer-view{background:var(--surface-strong);backdrop-filter:blur(26px) saturate(135%);-webkit-backdrop-filter:blur(26px) saturate(135%);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow)}
+  .explorer-scene{overflow:hidden}
+  .explorer-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .3s ease}
+  .explorer-image-shade{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.18),rgba(10,10,10,.66))}
+  .scene-stack{position:relative;z-index:2}
+  .scene-card{background:rgba(255,255,255,.74);backdrop-filter:blur(18px);box-shadow:0 10px 24px rgba(0,0,0,.10)}
+  .contact{position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,243,238,.94),rgba(245,243,238,.72)),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=88') center/cover;z-index:0}
+  .contact-grid{position:relative;z-index:1}
+  .contact-card{background:rgba(255,255,255,.50)}
+  .section,.interactive,.intro{position:relative}
+  .section::before,.interactive::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,0,.07),transparent 68%);pointer-events:none}
+  .section::before{right:-220px;top:10%}.interactive::before{left:-220px;bottom:0}
+
+  /* DARK THEME */
+  body.dark-theme{
+    --page:#080909;
+    --surface:rgba(255,255,255,.065);
+    --surface-strong:rgba(255,255,255,.09);
+    --text:#f7f5f0;
+    --muted2:rgba(255,255,255,.64);
+    --glass-border:rgba(255,255,255,.14);
+    --glass-shadow:0 26px 90px rgba(0,0,0,.35);
+    background:#080909;color:#f7f5f0;
+  }
+  body.dark-theme .site-nav{background:rgba(18,18,18,.62);border-color:rgba(255,255,255,.13);color:#fff}
+  body.dark-theme .nav-links a{color:#eee}
+  body.dark-theme .nav-cta{background:#fff;color:#111}
+  body.dark-theme .theme-toggle{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);color:#fff}
+  body.dark-theme .theme-track{background:rgba(255,255,255,.15)}
+  body.dark-theme .theme-knob{background:#fff}
+  body.dark-theme .hero::before{background:radial-gradient(circle at 76% 30%,rgba(255,90,0,.28),transparent 24%),radial-gradient(circle at 32% 65%,rgba(255,180,61,.08),transparent 26%),linear-gradient(130deg,#080909,#14110f 58%,#090909)}
+  body.dark-theme .hero-copy,body.dark-theme .intro-copy,body.dark-theme .section-head p,body.dark-theme .story-light p,body.dark-theme .principle p,body.dark-theme .contact-copy p{color:rgba(255,255,255,.66)}
+  body.dark-theme .btn-secondary{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff}
+  body.dark-theme .product-card,body.dark-theme .deep-card,body.dark-theme .explorer-tab,body.dark-theme .principle{color:#fff}
+  body.dark-theme .product-badge{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.14)}
+  body.dark-theme .product-card p{color:rgba(255,255,255,.62)}
+  body.dark-theme .deep-points span{background:rgba(255,255,255,.05);color:#fff;border-color:rgba(255,255,255,.12)}
+  body.dark-theme .explorer-tab{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.13)}
+  body.dark-theme .explorer-tab.active{background:#fff;color:#111}
+  body.dark-theme .explorer-tab.active span{color:#666}
+  body.dark-theme .explorer-view{color:#fff;background:rgba(255,255,255,.08)}
+  body.dark-theme .explorer-view p{color:rgba(255,255,255,.66)}
+  body.dark-theme .explorer-view.stay{background:rgba(255,255,255,.08)}
+  body.dark-theme .contact{background:#0c0c0c}
+  body.dark-theme .contact::before{background:linear-gradient(90deg,rgba(8,9,9,.96),rgba(8,9,9,.72)),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=88') center/cover}
+  body.dark-theme .contact-card{background:rgba(255,255,255,.07)}
+  body.dark-theme .field label,body.dark-theme .form-note{color:rgba(255,255,255,.52)}
+  body.dark-theme .field input,body.dark-theme .field textarea{background:rgba(255,255,255,.07);color:#fff;border-color:rgba(255,255,255,.13)}
+  body.dark-theme .meta-icon{background:rgba(255,255,255,.07);color:#fff;border-color:rgba(255,255,255,.12)}
+  body.dark-theme footer{background:#080909;border-color:rgba(255,255,255,.10);color:#fff}
+  body.dark-theme .footer-right{color:rgba(255,255,255,.64)}
+  body.dark-theme .footer-left p{color:rgba(255,255,255,.52)}
+  body.dark-theme .ribbon-item{color:rgba(255,255,255,.55)}
+  body.dark-theme .accent-line{box-shadow:0 0 24px rgba(255,90,0,.22)}
+  body.dark-theme .system-section{background:#050606}
+
+  @media (max-width:950px){
+    .nav-actions{margin-left:auto}
+    .deep-card,.deep-card:nth-child(even){grid-template-columns:1fr}
+    .deep-card:nth-child(even) .deep-image{order:0}
+    .deep-image img{min-height:300px}
+  }
+  @media (max-width:620px){
+    .theme-toggle{padding:4px 6px}.theme-icon{display:none}
+    .nav-actions{gap:6px}
+    .hero-main-card{padding:24px}
+    .hero-main-card h2{font-size:44px}
+    .deep-content{padding:34px 25px}
+    .deep-image img{min-height:260px}
+    .story{height:auto;min-height:0}
+    .story-media{flex-basis:55%;height:250px}
+    .story-copy{padding:26px 22px 28px}
+    .story h3{font-size:30px}
+  }
+
+  /* FINAL BRAND POLISH */
+  .brand-mark{width:30px;height:30px;object-fit:contain}
+  .brand-wordmark{width:118px;height:auto;display:block;object-fit:contain}
+  .footer-brand-row{display:flex;align-items:center;gap:12px}
+  .footer-brand-row .brand-mark{width:28px;height:28px}
+  .footer-brand-row .brand-wordmark{width:132px}
+  .nav-links{gap:22px}
+  .nav-links a:first-child{color:var(--sunfire)}
+  .hero-orb{display:grid;place-items:center;overflow:hidden}
+  .hero-orb::before{content:'';position:absolute;width:102px;height:102px;border-radius:50%;border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 0 0 14px rgba(255,255,255,.06),0 0 0 1px rgba(255,255,255,.08);}
+  .hero-orb::after{content:'SYSTEMS IN MOTION';position:absolute;bottom:27px;left:50%;transform:translateX(-50%);font-size:7px;letter-spacing:.18em;color:#fff;white-space:nowrap;font-weight:700}
+  .orb-mark{position:relative;z-index:2;width:58px;height:58px;object-fit:contain;filter:brightness(0) invert(1);opacity:.96}
+  .hero-orb .orb-core{position:absolute;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 0 28px rgba(255,255,255,.7)}
+  .hero-actions .btn-primary{background:var(--onyx);border:1px solid rgba(255,255,255,.10);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+  .hero-actions .btn-primary:hover{background:#050505}
+  .hero-actions .btn-secondary{background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.62);box-shadow:0 14px 35px rgba(17,17,17,.08),inset 0 1px 0 rgba(255,255,255,.7)}
+  .product-flow .product-visual{background:linear-gradient(145deg,#fff8f0,#fff)}
+  .product-flow .product-visual .visual-mark{width:132px;height:132px}
+  .product-command .product-visual{background:#171717}
+  .product-command .product-photo{filter:saturate(.86) contrast(1.02)}
+  .deep-command .deep-image::after{background:linear-gradient(90deg,rgba(0,0,0,.12),rgba(0,0,0,.55))}
+  .deep-command .deep-image img{object-position:center center}
+  .footer-grid{display:grid;grid-template-columns:1.35fr .8fr .8fr 1.2fr;gap:34px;padding:42px 0 34px}
+  .footer-column{display:grid;align-content:start;gap:11px}
+  .footer-kicker{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#777;font-weight:700;margin-bottom:4px}
+  .footer-column a{font-size:13px;color:#4e4e4e;transition:color .2s ease,transform .2s ease}
+  .footer-column a:hover{color:var(--sunfire);transform:translateX(2px)}
+  .footer-about{max-width:310px}
+  .footer-about p{font-size:13px;color:#707070;margin:13px 0 0;line-height:1.65}
+  .footer-socials{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .footer-socials a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(17,17,17,.10);background:rgba(255,255,255,.54);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:11px;font-weight:700}
+  .newsletter-copy{font-size:13px;color:#707070;margin:0 0 4px}
+  .newsletter-form{display:flex;gap:7px;margin-top:6px}
+  .newsletter-form input{min-width:0;flex:1;border:1px solid rgba(17,17,17,.10);background:rgba(255,255,255,.58);border-radius:12px;padding:11px 12px;outline:none}
+  .newsletter-form button{border:0;border-radius:12px;background:var(--onyx);color:#fff;padding:0 14px;font-size:12px;font-weight:700}
+  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+  .footer-legal{display:flex;gap:18px;flex-wrap:wrap}
+  .footer-legal a,.footer-bottom small{font-size:11px;color:#777}
+  body.dark-theme .footer-kicker,body.dark-theme .footer-about p,body.dark-theme .newsletter-copy{color:rgba(255,255,255,.48)}
+  body.dark-theme .footer-column a{color:rgba(255,255,255,.68)}
+  body.dark-theme .footer-column a:hover{color:var(--sunfire)}
+  body.dark-theme .footer-socials a{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.13);color:#fff}
+  body.dark-theme .newsletter-form input{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.13);color:#fff}
+  body.dark-theme .newsletter-form button{background:#fff;color:#111}
+  body.dark-theme .footer-bottom{border-color:rgba(255,255,255,.10)}
+  body.dark-theme .footer-legal a,body.dark-theme .footer-bottom small{color:rgba(255,255,255,.44)}
+  @media(max-width:950px){.footer-grid{grid-template-columns:1fr 1fr}.footer-about{max-width:none}}
+  @media(max-width:620px){.brand-wordmark{width:94px}.nav-links{display:none}.footer-grid{grid-template-columns:1fr}.footer-bottom{align-items:flex-start;flex-direction:column}.newsletter-form{max-width:420px}}
+
+  .footer-policy{position:absolute;left:-99999px;width:1px;height:1px;overflow:hidden}
+
+
+  /* FINAL ERROR FIXES */
+  .brand-mark,.brand-wordmark{background:transparent}
+  .footer-socials a svg{width:15px;height:15px;display:block}
+  .footer-socials a{color:var(--text)}
+  body.dark-theme .eyebrow{color:rgba(255,255,255,.58)}
+  body.dark-theme .meta-row span{color:rgba(255,255,255,.58)}
+  body.dark-theme .story-light{color:#fff;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.05))}
+  body.dark-theme .story-light .story-art{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12)}
+  body.dark-theme .story p{color:rgba(255,255,255,.64)}
+  body.dark-theme .principle{background:rgba(255,255,255,.065);border-color:rgba(255,255,255,.13)}
+  body.dark-theme .scene-card{background:rgba(18,18,18,.68);border-color:rgba(255,255,255,.12);color:#fff}
+  body.dark-theme .product-command .product-open{color:#fff}
+  body.dark-theme .product-command .product-badge{color:#fff}
+  body.dark-theme .product-command p{color:rgba(255,255,255,.62)}
+  @media(max-width:620px){.hero-grid{gap:28px}.site-nav{padding-left:12px}.brand-wordmark{width:94px}}
+
+
+/* NENTRIC CORRECTION PASS */
+.intro .accent-line{display:none!important}
+
+/* Hero floating image card */
+.hero-image-card{width:258px!important;padding:0!important;border-radius:28px!important;overflow:hidden!important;background:rgba(20,20,20,.78)!important;border:1px solid rgba(255,255,255,.32)!important;box-shadow:0 28px 70px rgba(0,0,0,.20)!important;backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important}
+.hero-chip-photo{display:block;width:100%;height:170px;object-fit:cover;object-position:center 55%}
+.hero-chip-caption{padding:15px 17px 18px;color:#fff;background:linear-gradient(180deg,rgba(15,15,15,.72),rgba(15,15,15,.94))}
+.hero-chip-caption span,.hero-chip-caption small{display:block;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.56)}
+.hero-chip-caption strong{display:block;font-size:18px;line-height:1.05;letter-spacing:-.03em;margin:9px 0 7px;color:#fff}
+.hero-chip-caption small{font-size:9px;letter-spacing:.11em;color:rgba(255,255,255,.46)}
+
+/* Better marquee: one clean stream enters from the right and exits left */
+.ribbon{padding:18px 0 72px;overflow:hidden}
+.ribbon-track{gap:34px;width:max-content;animation:nentricMarquee 26s linear infinite;will-change:transform}
+.ribbon-item{gap:14px;font-size:13px;letter-spacing:.01em}
+@keyframes nentricMarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+
+/* Product overview: image first, copy underneath, no competing overlap */
+.products{align-items:stretch}
+.product-card{min-height:560px!important;padding:0!important;display:flex;flex-direction:column;background:var(--surface)!important;overflow:hidden!important;position:relative!important}
+.product-card::after{display:none!important}
+.product-visual{position:relative!important;inset:auto!important;right:auto!important;bottom:auto!important;width:100%!important;height:270px!important;min-height:270px!important;flex:none!important;border:0!important;border-radius:30px 30px 0 0!important;display:block!important;overflow:hidden!important}
+.product-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 56%,rgba(0,0,0,.36));pointer-events:none;z-index:1}
+.product-card-copy{display:flex;flex:1;flex-direction:column;padding:24px 24px 23px;position:relative;z-index:3}
+.product-top{align-items:flex-start}
+.product-name{font-size:28px}
+.product-badge{background:rgba(255,255,255,.64);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.product-card p{max-width:none!important;margin:14px 0 18px!important;font-size:15px!important;line-height:1.55}
+.product-open{position:static!important;margin-top:auto;display:inline-flex;align-items:center;gap:8px;width:max-content;padding:9px 13px!important;border-radius:999px!important;border:1px solid var(--glass-border)!important;background:rgba(255,255,255,.52)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important}
+.product-open:hover{background:rgba(255,255,255,.82)!important;transform:translateY(-1px)}
+.product-photo{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;transform:none!important}
+.product-flow .product-photo{object-fit:contain!important;background:#101010;padding:28px}
+.product-flow .product-visual{background:#111!important}
+.product-stay .product-photo{object-position:center center}
+.product-command .product-photo{object-position:center 46%}
+.image-glass-label{position:absolute;left:16px;bottom:15px;z-index:2;padding:9px 12px;border-radius:999px;color:#fff;font-size:9px;letter-spacing:.16em;background:rgba(15,15,15,.54);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+
+/* Explorer: keep readable copy in its own column and visuals in their own column */
+.explorer-view{min-height:540px!important;padding:42px!important;display:grid!important;grid-template-columns:minmax(0,1.08fr) minmax(330px,.92fr)!important;grid-template-rows:auto auto 1fr!important;column-gap:34px!important;align-items:start!important}
+#explorerEyebrow{grid-column:1;grid-row:1}
+#explorerTitle{grid-column:1;grid-row:2;margin-top:0!important;align-self:start}
+#explorerCopy{grid-column:1;grid-row:3;max-width:none!important;margin-top:18px!important;align-self:start}
+.explorer-scene{grid-column:2;grid-row:1/4;position:relative!important;inset:auto!important;width:100%!important;height:100%!important;min-height:380px!important;margin:0!important;border-radius:30px!important;overflow:hidden!important}
+.explorer-image{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important}
+.explorer-image-shade{background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.46))!important}
+.scene-stack{position:absolute!important;left:18px!important;right:18px!important;bottom:18px!important;width:auto!important;display:grid!important;gap:8px!important;z-index:3!important}
+.scene-card{padding:12px 14px!important;border-radius:17px!important;background:rgba(14,14,14,.72)!important;border:1px solid rgba(255,255,255,.18)!important;color:#fff!important;box-shadow:0 12px 26px rgba(0,0,0,.14)!important;backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important}
+.scene-card span:first-child{font-size:13px!important;font-weight:600;color:#fff!important}
+.scene-pill{width:38px!important;height:8px!important;border-radius:999px!important;background:var(--sunfire)!important}
+body.dark-theme .explorer-view h3{color:#fff!important}
+body.dark-theme #explorerCopy{color:rgba(255,255,255,.74)!important}
+
+/* Newsletter */
+.newsletter-title{font-size:24px!important;line-height:1.02!important;letter-spacing:-.045em!important;color:var(--sunfire)!important;margin-bottom:12px!important}
+.footer-column:last-child{padding:22px!important;border-radius:26px!important;background:linear-gradient(145deg,rgba(255,255,255,.58),rgba(255,247,236,.76))!important;border:1px solid rgba(17,17,17,.08)!important;box-shadow:0 18px 50px rgba(17,17,17,.05)!important}
+body.dark-theme .footer-column:last-child{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,90,0,.06))!important;border-color:rgba(255,255,255,.14)!important}
+body.dark-theme .newsletter-title{color:var(--sunfire)!important}
+
+/* True dark-mode brand wordmark: no white image box */
+body.dark-theme .footer-brand-row .brand-wordmark{content:url(assets/nentric_wordmark_dark.png)!important;background:transparent!important}
+body.dark-theme .brand-wordmark{background:transparent!important}
+
+/* Real icon treatment */
+.footer-socials a{display:grid!important;place-items:center!important;width:34px!important;height:34px!important;border-radius:50%!important;border:1px solid var(--glass-border)!important;background:var(--surface)!important}
+.footer-socials svg{width:15px!important;height:15px!important;display:block!important}
+body.dark-theme .footer-socials a{color:#fff!important}
+
+@media (max-width:900px){
+  .explorer-view{grid-template-columns:1fr!important;grid-template-rows:auto auto auto auto!important;min-height:0!important}
+  #explorerEyebrow,#explorerTitle,#explorerCopy{grid-column:1!important}
+  #explorerEyebrow{grid-row:1!important}
+  #explorerTitle{grid-row:2!important}
+  #explorerCopy{grid-row:3!important}
+  .explorer-scene{grid-column:1!important;grid-row:4!important;min-height:320px!important;margin-top:20px!important}
+}
+@media (max-width:620px){
+  .hero-image-card{width:205px!important}
+  .hero-chip-photo{height:135px}
+  .hero-chip-caption strong{font-size:16px}
+  .product-visual{height:225px!important;min-height:225px!important}
+  .product-card{min-height:520px!important}
+  .explorer-view{padding:26px!important}
+}
+@media (prefers-reduced-motion:reduce){.ribbon-track{animation:none!important}}
+
+
+
+/* FINAL NENTRIC POLISH */
+/* Keep dark-mode wordmark fully transparent and use the proper white brand asset. */
+body.dark-theme .brand-wordmark{content:url('assets/nentric_wordmark_dark.png')!important;background:transparent!important}
+
+/* Prevent decorative hero/header marks from reading like stray dashes. */
+.nav-links a.active::before,.nav-links a.active::after{display:none!important}
+
+/* Keep explorer content readable even on narrow laptop widths. */
+@media (min-width:901px) and (max-width:1080px){
+  .explorer-view{grid-template-columns:minmax(0,1fr) minmax(285px,.9fr)!important;column-gap:24px!important;padding:34px!important}
+  .explorer-view h3{font-size:38px!important}
+  .explorer-view p{font-size:15px!important}
+  .explorer-scene{min-height:340px!important}
+}
+
+/* Avoid hidden focus states and preserve keyboard visibility. */
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--sunfire);outline-offset:3px}
+
+</style>
+<style>
+/* FINAL HERO + IMAGE RESTORE PASS */
+.hero-main-card{isolation:isolate;min-height:500px}
+.hero-photo{
+  position:absolute;inset:0;
+  background-image:url("assets/flow-real-world.webp");
+  background-size:cover;background-position:center 48%;
+  z-index:-3;transform:scale(1.01);
+}
+.hero-photo-overlay{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(8,8,8,.88) 0%,rgba(8,8,8,.58) 42%,rgba(8,8,8,.16) 78%,rgba(8,8,8,.05) 100%),
+    linear-gradient(0deg,rgba(8,8,8,.44),transparent 42%);
+  z-index:-2;
+}
+.hero-main-copy{
+  position:relative;z-index:2;max-width:620px;
+  padding:28px 30px;border:1px solid rgba(255,255,255,.16);
+  border-radius:28px;background:rgba(10,10,10,.25);
+  backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%);
+  box-shadow:0 22px 60px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.10);
+}
+.hero-chip{
+  right:18px;top:18px;width:236px;padding:0;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.34);
+  backdrop-filter:blur(22px) saturate(130%);-webkit-backdrop-filter:blur(22px) saturate(130%);
+  box-shadow:0 18px 60px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.24);
+  z-index:5;
+}
+.hero-chip-inner{padding:18px 19px 20px}
+.hero-chip-inner span{display:block;font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:rgba(255,255,255,.70);margin-bottom:10px}
+.hero-chip-inner strong{display:block;font-size:17px;line-height:1.08;letter-spacing:-.025em;color:#fff}
+.hero-chip-inner small{display:block;margin-top:9px;font-size:10px;line-height:1.45;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.60)}
+
+body.dark-theme .hero-photo{background-image:url("assets/home-local/img-598b597a80-clean.webp");background-position:center 54%}
+body.dark-theme .hero-photo-overlay{
+  background:
+    linear-gradient(90deg,rgba(5,6,7,.84) 0%,rgba(5,6,7,.50) 48%,rgba(5,6,7,.16) 82%,rgba(5,6,7,.08) 100%),
+    linear-gradient(0deg,rgba(5,6,7,.45),transparent 50%);
+}
+body.dark-theme .hero-main-copy{background:rgba(8,8,8,.22);border-color:rgba(255,255,255,.14)}
+body.dark-theme .hero-chip{background:rgba(13,13,13,.42);border-color:rgba(255,255,255,.18)}
+
+/* Editorial moving ribbon: seamless out / in motion with edge fade. */
+.ribbon{
+  position:relative;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 7%,#000 93%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 7%,#000 93%,transparent 100%);
+}
+.ribbon-track{
+  display:flex;gap:28px;width:max-content;
+  animation:ribbonLoop 28s linear infinite;
+  will-change:transform;
+  padding-left:2vw;
+}
+.ribbon-item{
+  display:flex;align-items:center;gap:16px;
+  font-size:14px;line-height:1;letter-spacing:.01em;
+  white-space:nowrap;color:#666;
+  padding:10px 0;
+}
+.ribbon-dot{width:7px;height:7px;flex:0 0 7px;background:var(--sunfire);border-radius:50%;box-shadow:0 0 0 4px rgba(255,90,0,.07)}
+@keyframes ribbonLoop{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+body.dark-theme .ribbon-item{color:rgba(255,255,255,.62)}
+
+/* Product overview: image-first composition so copy never fights the image. */
+.products{align-items:stretch}
+.product-card{
+  display:flex;flex-direction:column;min-height:570px;
+  padding:0;position:relative;overflow:hidden;
+}
+.product-card .product-visual{
+  position:relative;right:auto;bottom:auto;width:100%;height:286px;min-height:286px;
+  flex:0 0 286px;border-radius:30px 30px 0 0!important;
+  border:0!important;overflow:hidden;display:block;
+}
+.product-card .product-visual .product-photo{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+.product-card .product-visual .visual-mark{
+  position:absolute;inset:0;margin:auto;width:150px;height:150px;object-fit:contain;
+}
+.product-card .product-visual::after{
+  background:linear-gradient(180deg,rgba(0,0,0,0.02) 0%,rgba(0,0,0,.10) 55%,rgba(0,0,0,.62) 100%);
+}
+.product-card .product-card-copy{
+  position:relative;z-index:2;display:flex;flex:1;flex-direction:column;
+  padding:28px 30px 30px;background:transparent;
+}
+.product-card .product-top{align-items:center}
+.product-card .product-card-copy p{max-width:100%;margin-top:18px;line-height:1.58}
+.product-card .product-open{
+  position:static;align-self:flex-start;margin-top:auto;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 15px;border-radius:999px;
+  background:rgba(255,255,255,.76);border:1px solid rgba(17,17,17,.08);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+}
+body.dark-theme .product-card .product-open{
+  background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.16);color:#fff;
+}
+body.dark-theme .product-card .product-visual .product-photo{filter:saturate(.92) brightness(.88)}
+.product-command .product-visual{background:#171717}
+.product-flow .product-visual{background:#101010}
+.product-stay .product-visual{background:#ece9e2}
+
+/* Keep the uploaded Command image crisp and correctly assigned. */
+.product-command .product-photo{object-position:center center;filter:saturate(.92) contrast(1.03)}
+
+/* Responsive product cards */
+@media (max-width:950px){
+  .product-card{min-height:540px}
+  .product-card .product-visual{height:265px;min-height:265px;flex-basis:265px}
+}
+@media (max-width:620px){
+  .hero-main-copy{padding:22px 20px;border-radius:22px}
+  .hero-chip{right:10px;top:10px;width:205px}
+  .product-card{min-height:530px}
+  .product-card .product-visual{height:245px;min-height:245px;flex-basis:245px}
+  .product-card .product-card-copy{padding:24px 22px 24px}
+}
+</style>
+<style id="restoration-corrections">
+/* Hero: uploaded bright and dark images remain the sole hero visuals. */
+.hero-main-card{
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(9,10,10,.24);
+  backdrop-filter:blur(3px) saturate(120%);
+  -webkit-backdrop-filter:blur(3px) saturate(120%);
+}
+.hero-photo{
+  background-size:cover !important;
+  background-position:center 52% !important;
+  transform:scale(1.04) !important;
+}
+.hero-photo-overlay{
+  background:linear-gradient(115deg,rgba(8,9,9,.68) 0%,rgba(8,9,9,.33) 52%,rgba(8,9,9,.08) 100%) !important;
+}
+.hero-chip{
+  width:218px;
+  border-radius:26px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.74);
+  backdrop-filter:blur(22px) saturate(135%);
+  -webkit-backdrop-filter:blur(22px) saturate(135%);
+  box-shadow:var(--glass-shadow);
+}
+.hero-chip .mini-mark{
+  width:54px;
+  height:54px;
+  object-fit:contain;
+}
+.hero-chip strong{
+  font-size:15px;
+  letter-spacing:-.02em;
+}
+body.dark-theme .hero-photo-overlay{
+  background:linear-gradient(115deg,rgba(5,6,7,.42) 0%,rgba(5,6,7,.20) 56%,rgba(5,6,7,.06) 100%) !important;
+}
+body.dark-theme .hero-chip{
+  background:rgba(8,9,10,.84);
+  border-color:rgba(255,255,255,.18);
+  color:#fff;
+  box-shadow:0 24px 60px rgba(0,0,0,.36);
+}
+body.dark-theme .hero-chip span{color:rgba(255,255,255,.64)}
+
+/* The capability rail loops as a true edge-to-edge marquee rather than appearing from the middle. */
+.ribbon{
+  position:relative;
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);
+}
+.ribbon-track{
+  display:flex;
+  width:max-content;
+  gap:0;
+  will-change:transform;
+  transform:translate3d(0,0,0);
+  animation:netric-marquee 30s linear infinite;
+}
+.ribbon-set{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  padding-right:34px;
+  flex:0 0 auto;
+}
+.ribbon-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:12px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.ribbon-dot{
+  width:6px;
+  height:6px;
+  flex:0 0 6px;
+  border-radius:50%;
+  background:var(--sunfire);
+  box-shadow:0 0 0 4px rgba(255,90,0,.07);
+}
+@keyframes netric-marquee{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+
+/* Product overview: image occupies the upper half, copy stays completely beneath it. */
+.product-card{
+  min-height:570px;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  position:relative;
+}
+.product-card .product-visual{
+  position:relative;
+  inset:auto;
+  width:100%;
+  height:50%;
+  min-height:285px;
+  flex:0 0 285px;
+  border-radius:30px 30px 0 0 !important;
+  overflow:hidden;
+}
+.product-card .product-visual .product-photo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.product-card .product-card-copy{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding:28px 30px 30px;
+}
+.product-card .product-card-copy p{
+  max-width:100%;
+  margin-top:18px;
+  line-height:1.58;
+}
+.product-card .product-open{
+  position:static;
+  align-self:flex-start;
+  margin-top:auto;
+}
+.product-flow .product-visual{background:#101010}
+.product-stay .product-visual{background:#ece9e2}
+.product-command .product-visual{background:#151515}
+body.dark-theme .product-card .product-open{
+  color:#fff;
+  background:rgba(255,255,255,.09);
+  border-color:rgba(255,255,255,.16);
+}
+@media(max-width:620px){
+  .hero-chip{width:205px}
+  .ribbon-set{gap:25px;padding-right:25px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ribbon-track{animation:none}
+}
+</style>
+<style id="final-hero-fix">
+/* FINAL HERO: the uploaded hero image is the hero. No floating glass panel. */
+.hero{min-height:100svh!important;display:flex!important;align-items:center!important;position:relative!important;overflow:hidden!important;padding:120px 0 80px!important;color:#111!important;background:#d9d4ca!important}
+.hero::before{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background-image:linear-gradient(90deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.70) 32%,rgba(255,255,255,.14) 68%,rgba(255,255,255,0) 100%),url(assets/home-local/hero-bright-upload.png)!important;background-size:cover!important;background-position:center!important}
+.hero::after{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background:linear-gradient(180deg,rgba(255,255,255,.18),transparent 22%,transparent 74%,rgba(255,255,255,.12))!important;pointer-events:none!important}
+.hero-grid{display:block!important;position:relative!important;z-index:2!important}
+.hero-copy{max-width:680px!important;color:#222!important;text-shadow:0 1px 18px rgba(255,255,255,.18)!important}
+.hero h1{max-width:760px!important}
+.hero-visual{display:none!important}
+.hero-main-card,.hero-chip,.hero-orb{display:none!important}
+.hero-actions .btn-primary{background:var(--onyx)!important;color:#fff!important;border:1px solid rgba(255,255,255,.18)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important}
+.hero-actions .btn-secondary{background:rgba(255,255,255,.45)!important;color:#111!important;border:1px solid rgba(255,255,255,.7)!important;backdrop-filter:blur(16px)!important;-webkit-backdrop-filter:blur(16px)!important}
+body.dark-theme .hero{color:#fff!important;background:#090909!important}
+body.dark-theme .hero::before{background-image:linear-gradient(90deg,rgba(5,6,7,.82) 0%,rgba(5,6,7,.58) 34%,rgba(5,6,7,.20) 70%,rgba(5,6,7,.08) 100%),url(assets/home-local/img-598b597a80-clean.webp)!important;background-size:cover!important;background-position:center!important}
+body.dark-theme .hero::after{background:linear-gradient(180deg,rgba(0,0,0,.22),transparent 22%,transparent 74%,rgba(0,0,0,.24))!important}
+body.dark-theme .hero-copy{color:#fff!important;text-shadow:0 2px 24px rgba(0,0,0,.35)!important}
+body.dark-theme .hero-actions .btn-secondary{background:rgba(20,20,20,.38)!important;color:#fff!important;border-color:rgba(255,255,255,.25)!important}
+
+/* Product cards: one image, correct product, then readable copy. */
+.product-card .product-visual{height:300px!important;min-height:300px!important;flex-basis:300px!important}
+.product-card .product-card-copy{min-height:260px!important;background:var(--surface)!important}
+.product-flow .product-visual{background:#101010!important}
+.product-flow .product-photo{object-fit:contain!important;padding:38px!important;background:#101010!important}
+.product-stay .product-photo,.product-command .product-photo{object-fit:cover!important;padding:0!important}
+.product-stay .product-photo{object-position:center center!important}
+.product-command .product-photo{object-position:center center!important}
+.product-visual::after{background:linear-gradient(180deg,transparent 58%,rgba(0,0,0,.38))!important}
+body.dark-theme .product-card .product-card-copy{background:#111!important;color:#fff!important}
+body.dark-theme .product-badge{background:rgba(20,20,20,.48)!important;color:#fff!important;border-color:rgba(255,255,255,.18)!important}
+
+/* Explorer: correct visual per product and keep the copy comfortably readable. */
+.explorer-scene{min-height:420px!important}
+.explorer-image{object-fit:cover!important}
+body.dark-theme #explorerCopy{color:rgba(255,255,255,.82)!important}
+
+/* Remove stray decorative dash from the home/navigation area. */
+.site-nav a.active::before,.site-nav a.active::after,.nav-link.active::before,.nav-link.active::after{display:none!important;content:none!important}
+</style>
+<style>
+  .site-nav .nav-links{display:flex!important;align-items:center!important;gap:26px!important}
+  .site-nav .nav-links a{display:block!important;visibility:visible!important;opacity:1}
+  @media(max-width:900px){
+    .site-nav .nav-links{display:none!important}
+  }
+</style>
+<style id="homepage-mobile-nav-fix">
+.mobile-menu-toggle{display:none;place-items:center;width:40px;height:38px;padding:0;border:1px solid rgba(17,17,17,.12);border-radius:12px;background:rgba(255,255,255,.58);color:#111;position:relative;cursor:pointer}
+.mobile-menu-toggle span{display:block;width:18px;height:2px;margin:2px 0;border-radius:99px;background:#111;transition:opacity .2s ease,transform .2s ease}
+.mobile-menu-toggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.mobile-menu-toggle.open span:nth-child(2){opacity:0}
+.mobile-menu-toggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{display:none}
+@media(max-width:900px){
+  .site-nav .nav-links{display:none!important}
+  .mobile-menu-toggle{display:grid!important}
+}
+@media(max-width:620px){
+  .site-nav{z-index:150!important}
+  .mobile-menu-toggle{width:39px;height:36px;z-index:151!important;pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none}
+  .mobile-menu{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;padding:26px 22px 28px;background:rgba(10,10,10,.97);transform:translateX(100%);transition:transform .38s cubic-bezier(.16,1,.3,1);color:#fff;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+  .mobile-menu.open{transform:none}
+  .mobile-menu-top{display:flex;align-items:center;justify-content:space-between;color:rgba(255,255,255,.5);font-size:10px;letter-spacing:.16em;margin-bottom:70px}
+  .mobile-menu-close{width:38px;height:38px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:24px;line-height:1;cursor:pointer}
+  .mobile-menu>a{font-size:36px;letter-spacing:-.055em;line-height:1.05;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .mobile-menu-product-links{display:grid;grid-template-columns:1fr;gap:6px;margin-top:30px}
+  .mobile-menu-product-links a{font-size:14px;color:#FF5A00;padding:4px 0}
+  body.mobile-menu-open{overflow:hidden}
+  body.dark-theme .mobile-menu-toggle{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14)}
+  body.dark-theme .mobile-menu-toggle span{background:#fff}
+}
+</style>
+<style id="tablet-menu-fix">
+/* Tablet navigation: the hamburger must open the same full-screen menu as mobile. */
+@media (min-width:621px) and (max-width:900px){
+  .mobile-menu{
+    position:fixed!important;inset:0!important;z-index:200!important;display:flex!important;
+    flex-direction:column!important;padding:26px 22px 28px!important;
+    background:rgba(10,10,10,.97)!important;
+    transform:translateX(100%)!important;
+    transition:transform .38s cubic-bezier(.16,1,.3,1)!important;
+    color:#fff!important;
+    backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important;
+  }
+  .mobile-menu.open{transform:none!important}
+  .mobile-menu-top{display:flex!important;align-items:center!important;justify-content:space-between!important;margin-bottom:70px!important}
+  .mobile-menu-close{display:block!important}
+  .mobile-menu>a{display:block!important}
+  .mobile-menu-product-links{display:grid!important}
+  body.mobile-menu-open{overflow:hidden!important}
+}
+</style>
+<style id="nentric-v10-mobile-fixes">
+/* V10: mobile navigation, first-paint stability and touch polish */
+.site-nav{z-index:150!important}
+.mobile-menu-toggle{position:relative!important;z-index:151!important;pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important;-webkit-appearance:none!important;appearance:none!important}
+.mobile-menu{z-index:200!important}
+#products,#thinking,#about{scroll-margin-top:96px}
+
+/* Product explorer: the visual leads on small screens, while copy remains legible below it. */
+.explorer-tab,
+.explorer-tab:hover,
+.explorer-tab:focus,
+.explorer-tab:active{
+  -webkit-appearance:none!important;
+  appearance:none!important;
+  background-clip:padding-box!important;
+  outline:none!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+.explorer-tab{color:#111!important}
+.explorer-tab span{color:#666!important}
+.explorer-tab.active,
+.explorer-tab.active:hover,
+.explorer-tab.active:focus,
+.explorer-tab.active:active{
+  background:var(--sunfire)!important;
+  color:#fff!important;
+  border-color:var(--sunfire)!important;
+  box-shadow:0 12px 30px rgba(255,90,0,.18)!important;
+}
+.explorer-tab.active span{color:rgba(255,255,255,.82)!important}
+body.dark-theme .explorer-tab{background:rgba(255,255,255,.05)!important;color:#fff!important;border-color:rgba(255,255,255,.13)!important}
+body.dark-theme .explorer-tab span{color:rgba(255,255,255,.62)!important}
+body.dark-theme .explorer-tab.active,
+body.dark-theme .explorer-tab.active:hover,
+body.dark-theme .explorer-tab.active:focus,
+body.dark-theme .explorer-tab.active:active{
+  background:var(--sunfire)!important;
+  color:#fff!important;
+  border-color:var(--sunfire)!important;
+}
+
+@media(max-width:720px){
+  .cursor-glow{display:none!important}
+  .ribbon-track{animation:none!important}
+  .explorer-view{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    grid-template-rows:minmax(290px,74vw) auto auto auto!important;
+    min-height:0!important;
+    padding:14px!important;
+    gap:10px!important;
+    border-radius:26px!important;
+  }
+  .explorer-scene{
+    grid-column:1!important;
+    grid-row:1!important;
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:290px!important;
+    margin:0!important;
+    border-radius:22px!important;
+    overflow:hidden!important;
+  }
+  .explorer-image{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+  .explorer-image-shade{background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.54))!important}
+  .scene-stack{left:10px!important;right:10px!important;bottom:10px!important;width:auto!important;z-index:3!important}
+  .scene-card{height:44px!important;padding:0 11px!important;font-size:11px!important;background:rgba(255,255,255,.80)!important}
+  #explorerEyebrow{grid-column:1!important;grid-row:2!important;margin:2px 2px 0!important}
+  #explorerTitle{grid-column:1!important;grid-row:3!important;font-size:39px!important;line-height:.98!important;margin:0 2px!important}
+  #explorerCopy{grid-column:1!important;grid-row:4!important;margin:0 2px 4px!important;font-size:15px!important;line-height:1.62!important;max-width:none!important}
+
+  /* How we think: image first, full-width, then clearly readable copy. */
+  #thinking .system-inner{display:flex!important;flex-direction:column!important;gap:22px!important;align-items:stretch!important}
+  #thinking .system-stage{order:1!important;width:100%!important;height:clamp(320px,82vw,390px)!important;min-height:320px!important;border-radius:26px!important}
+  #thinking .system-inner > .reveal:first-child{order:2!important}
+  #thinking .system-photo{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;opacity:.68!important}
+  #thinking .system-photo-overlay{background:linear-gradient(135deg,rgba(5,5,5,.44),rgba(5,5,5,.20) 60%,rgba(255,90,0,.10))!important}
+  #thinking .system-copy{font-size:15.5px!important;line-height:1.68!important;color:rgba(255,255,255,.84)!important;max-width:none!important}
+  #thinking .display{font-size:40px!important;line-height:1.0!important;max-width:14ch!important}
+  #thinking .stage-node{width:68px!important;height:68px!important;border-radius:18px!important;font-size:10px!important}
+  #thinking .node-core{width:94px!important;height:94px!important}
+
+  /* Less GPU work on small touch screens while keeping the glass language. */
+  .site-nav,.theme-toggle,.mobile-menu-toggle,.explorer-view,.contact-card,.story-art{backdrop-filter:blur(10px)!important;-webkit-backdrop-filter:blur(10px)!important}
+}
+</style>
+<style id="nentric-v26-explorer-copy-fix">
+/* V26: remove the repeated product-name eyebrow from the explorer writeup only. Tabs remain named. */
+.explorer-view > #explorerEyebrow{display:none!important}
+#explorerTitle{grid-row:1!important}
+#explorerCopy{grid-row:2!important}
+@media(max-width:900px){
+  #explorerEyebrow{display:none!important}
+  #explorerTitle{grid-row:1!important}
+  #explorerCopy{grid-row:2!important}
+  .explorer-scene{grid-row:3!important}
+}
+</style>
+<style id="nentric-v13-explorer-precision-fix">
+/* V13: final, scoped explorer image correction. The image owns the visual panel. */
+.explorer-view{
+  padding:0 0 0 42px!important;
+  overflow:hidden!important;
+}
+.explorer-view > #explorerEyebrow,
+.explorer-view > #explorerTitle,
+.explorer-view > #explorerCopy{
+  margin-right:34px!important;
+}
+.explorer-scene{
+  grid-column:2!important;
+  grid-row:1/4!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:540px!important;
+  margin:0!important;
+  border-radius:0 30px 30px 0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.explorer-image{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:100%!important;
+  min-height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+body.dark-theme .explorer-view,
+body.dark-theme .explorer-view.command,
+body.dark-theme .explorer-view.stay{
+  background:var(--surface-strong)!important;
+}
+body.dark-theme .explorer-scene{background:transparent!important;border:0!important}
+@media(max-width:720px){
+  .explorer-view{
+    padding:0!important;
+    grid-template-columns:1fr!important;
+    grid-template-rows:auto auto auto auto!important;
+    overflow:hidden!important;
+    gap:0!important;
+    border-radius:26px!important;
+  }
+  .explorer-scene{
+    grid-column:1!important;
+    grid-row:1!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:clamp(290px,74vw,340px)!important;
+    margin:0!important;
+    border-radius:26px 26px 0 0!important;
+  }
+  .explorer-view > #explorerEyebrow{
+    grid-column:1!important;
+    grid-row:2!important;
+    margin:0!important;
+    padding:26px 26px 0!important;
+  }
+  .explorer-view > #explorerTitle{
+    grid-column:1!important;
+    grid-row:3!important;
+    margin:0!important;
+    padding:10px 26px 0!important;
+  }
+  .explorer-view > #explorerCopy{
+    grid-column:1!important;
+    grid-row:4!important;
+    margin:0!important;
+    padding:10px 26px 28px!important;
+  }
+  .explorer-image{
+    width:100%!important;
+    height:100%!important;
+    min-width:100%!important;
+    min-height:100%!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+  body.dark-theme .explorer-view,
+  body.dark-theme .explorer-view.command,
+  body.dark-theme .explorer-view.stay{background:var(--surface-strong)!important}
+}
+
+<style id="nentric-explorer-copy-spacing-fix">
+/* Keep the product explorer copy comfortably below the top edge. */
+@media(min-width:721px){
+  .explorer-view > #explorerTitle{padding-top:28px!important}
+  .explorer-view > #explorerCopy{padding-top:4px!important}
+}
+</style>
+</style>
+
+<style id="nentric-bright-explorer-copy-fix">
+/* Bright theme: keep the product explorer copy visible for every product. */
+body:not(.dark-theme) .explorer-view #explorerEyebrow{color:#ff5a00!important}
+body:not(.dark-theme) .explorer-view #explorerTitle{color:#111!important}
+body:not(.dark-theme) .explorer-view #explorerCopy{color:#5f5f5f!important}
+body:not(.dark-theme) .explorer-view.command #explorerEyebrow{color:#ff5a00!important}
+body:not(.dark-theme) .explorer-view.command #explorerTitle{color:#111!important}
+body:not(.dark-theme) .explorer-view.command #explorerCopy{color:#5f5f5f!important}
+</style>
+
+<style id="testimonial-author-fixes">
+.testimonial-card blockquote{margin-bottom:22px!important}
+.testimonial-card>p{display:flex;flex-direction:column;gap:3px;margin:0!important}
+.testimonial-card>p strong{font-size:.95rem;font-weight:700}
+.testimonial-card>p span{font-size:.78rem;opacity:.62;letter-spacing:.02em}
+body.dark-theme .testimonial-card>p span{color:rgba(255,255,255,.62)}
+</style>
+<style id="responsive-header-safe-zone">
+/* Keep the header clear before desktop navigation can become crowded. */
+@media (min-width:621px) and (max-width:1050px){
+  .site-nav .nav-links{display:none!important}
+  .mobile-menu-toggle{display:grid!important}
+  .mobile-menu{
+    position:fixed!important;inset:0!important;z-index:200!important;display:flex!important;
+    flex-direction:column!important;padding:26px 22px 28px!important;
+    background:rgba(10,10,10,.97)!important;
+    transform:translateX(100%)!important;
+    transition:transform .38s cubic-bezier(.16,1,.3,1)!important;
+    color:#fff!important;
+    backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important;
+  }
+  .mobile-menu.open{transform:none!important}
+  .mobile-menu-top{display:flex!important;align-items:center!important;justify-content:space-between!important;margin-bottom:70px!important}
+  .mobile-menu-close{display:block!important}
+  .mobile-menu>a{display:block!important}
+  .mobile-menu-product-links{display:grid!important}
+  body.mobile-menu-open{overflow:hidden!important}
+}
+</style>
+<style id="nentric-core-circle-fix">
+/* Keep the Nentric Core node circular at every responsive size. */
+.stage-node.node-core{
+  width:118px!important;
+  height:118px!important;
+  min-width:118px!important;
+  min-height:118px!important;
+  aspect-ratio:1/1!important;
+  border-radius:50%!important;
+  clip-path:circle(50% at 50% 50%)!important;
+  -webkit-clip-path:circle(50% at 50% 50%)!important;
+  transform:translate(-50%,-50%)!important;
+}
+@media(max-width:720px){
+  .stage-node.node-core{
+    width:94px!important;
+    height:94px!important;
+    min-width:94px!important;
+    min-height:94px!important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="cursor-glow" id="cursorGlow"></div>
+<header class="site-nav">
+<a aria-label="Nentric Technologies home" class="brand-lockup" href="#top">
+<img alt="Nentric logo mark" class="brand-mark" decoding="async" src="assets/nentric_mark.png"/>
+<img alt="Nentric" class="brand-wordmark" decoding="async" src="assets/nentric_wordmark.png"/>
+</a>
+<nav aria-label="Primary navigation" class="nav-links">
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="index.html#thinking">How we think</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div class="nav-actions">
+<button aria-label="Switch to dark theme" aria-pressed="false" class="theme-toggle" id="themeToggle" type="button">
+<span class="theme-icon sun">☼</span>
+<span class="theme-track"><span class="theme-knob"></span></span>
+<span class="theme-icon moon">◐</span>
+</button>
+<a class="nav-cta" href="contact.html">Talk to Nentric</a>
+<button aria-expanded="false" aria-label="Open navigation" class="mobile-menu-toggle" id="mobileMenuToggle" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+<aside aria-hidden="true" aria-label="Mobile navigation" class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu-top">
+<span>NENTRIC TECHNOLOGIES</span>
+<button aria-label="Close navigation" class="mobile-menu-close" id="mobileMenuClose" type="button">×</button>
+</div>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="index.html#thinking">How we think</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<div class="mobile-menu-product-links">
+<a href="flow.html">Nentric Flow</a>
+<a href="stay.html">Nentric Stay</a>
+<a href="command.html">Nentric Command</a>
+</div>
+</aside>
+<main id="top">
+<section class="hero">
+<div class="shell hero-grid">
+<div class="reveal">
+<div class="eyebrow">Nentric Technologies Ltd</div>
+<h1><span>We build</span><span class="accent">what moves.</span></h1>
+<p class="hero-copy">Nentric builds intelligent systems for the places where people, access, services and responsibilities meet. We make movement easier to understand, easier to manage and easier to trust.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#products">Explore what we build</a>
+<a class="btn btn-secondary" href="contact.html">Start a conversation</a>
+</div>
+</div>
+<div class="hero-visual reveal" style="transition-delay:.12s">
+<div class="hero-card hero-main-card">
+<div class="hero-photo"></div>
+<div class="hero-photo-overlay"></div>
+<div class="topline"><span>Nentric Technologies</span><span>Lagos</span></div>
+<div class="hero-main-copy">
+<div class="glass-kicker">CONNECTED TECHNOLOGY / REAL ENVIRONMENTS</div>
+<h2>People.<br/>Places.<br/>Movement.</h2>
+<p>One company building connected technology for the places where access, responsibility and everyday movement meet.</p>
+</div>
+<div class="topline"><span>We build what moves.</span><span>2026</span></div>
+</div>
+<div class="hero-chip">
+<img alt="Nentric logo mark" class="mini-mark" decoding="async" loading="lazy" src="assets/home-local/img-85837cff02.png"/>
+<strong>Connected by design.</strong>
+<span>Products that help important things move.</span>
+</div>
+<div aria-hidden="true" class="hero-orb"><img alt="" class="orb-mark" decoding="async" src="assets/home-local/img-85837cff02.png"/><span class="orb-core"></span></div>
+</div>
+</div>
+</section>
+<section class="intro" id="about">
+<div class="shell intro-grid">
+<div class="reveal">
+<p class="eyebrow">The company</p>
+<h2 class="display">Technology should make important work feel simpler.</h2>
+</div>
+<div class="reveal" style="transition-delay:.1s">
+<p class="intro-copy">Nentric Technologies Ltd is a Nigerian technology company building practical, secure and scalable systems for environments that keep changing. We look for the places where people, permission, information and physical movement meet, then build products that bring those pieces into better alignment.</p>
+<p class="intro-copy">We care about useful software, thoughtful design and the details that make a system dependable in the real world.</p>
+</div>
+</div>
+</section>
+<section class="section testimonials-slider-section" id="testimonials">
+<div class="shell">
+<div class="section-head reveal"><div><p class="eyebrow">From the people using Nentric</p><h2>A little word from our users.</h2></div><p>Real experiences from people using Nentric to make everyday access, services and living a little easier.</p></div>
+<div class="testimonial-slider" data-testimonial-slider tabindex="0" aria-label="User testimonials">
+<div class="testimonial-viewport">
+<article class="testimonial-slide active"><blockquote>“Before Nentric Flow, I was always asking the estate office about my dues and when payments were due. Now I get a reminder before anything becomes a problem. It’s one less thing I have to keep in my head.”</blockquote><p><strong>Adaeze</strong><span>Resident</span></p></article>
+<article class="testimonial-slide"><blockquote>“The biggest difference for me is that I don't have to go through the usual back and forth with the estate office. I can see what I need, submit a request and actually know what is happening with it.”</blockquote><p><strong>Tunde</strong><span>Homeowner</span></p></article>
+<article class="testimonial-slide"><blockquote>“I was expecting the usual ‘call me when you get to the gate’ situation, but I just got my access details and walked in. It was much easier than I expected.”</blockquote><p><strong>Daniel</strong><span>Nentric User</span></p></article>
+<article class="testimonial-slide"><blockquote>“Having guests over used to mean calling security, explaining who was coming and then getting another call when they arrived. Now I can send their access before they even leave home.”</blockquote><p><strong>Mariam</strong><span>Resident</span></p></article>
+<article class="testimonial-slide"><blockquote>“Rent and estate fees are the kind of things you think you won't forget until you actually do. The reminders are simple, but they make a big difference. I know what is due and when.”</blockquote><p><strong>Chisom</strong><span>Nentric User</span></p></article>
+<article class="testimonial-slide"><blockquote>“What I like is that it doesn't feel like I'm using five different systems. My home, guests, estate updates and requests are all in one place. Things that used to require calls and messages just happen inside the app.”</blockquote><p><strong>Femi</strong><span>Nentric User</span></p></article>
+</div>
+<div class="testimonial-controls"><button type="button" class="testimonial-arrow" data-testimonial-prev aria-label="Previous testimonial">←</button><div class="testimonial-dots" role="tablist" aria-label="Choose a testimonial"></div><button type="button" class="testimonial-arrow" data-testimonial-next aria-label="Next testimonial">→</button></div>
+</div>
+</div>
+</section>
+<section class="section" id="products">
+<div class="shell">
+<div class="section-head reveal">
+<h2>Three products. One way of thinking.</h2>
+<p>Each product starts with a real environment and turns a complicated everyday journey into something people can actually use.</p>
+</div>
+<div class="products">
+<article class="product-card product-flow reveal">
+<div class="product-visual product-visual-photo">
+<img alt="Nentric Flow brand mark" class="product-photo" decoding="async" loading="lazy" src="assets/home-local/nentric-flow-three-products.png"/>
+<div class="image-glass-label">ACCESS / MOVEMENT</div>
+</div>
+<div class="product-card-copy">
+<div class="product-top">
+<div class="product-name">Nentric Flow</div>
+<div class="product-badge">Access</div>
+</div>
+<p>Intelligent access for estates, offices and communities. Residents, guests and security teams get one clearer view of who is arriving, who approved the visit and what happens next.</p>
+<a class="product-open" href="flow.html">Explore Flow <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+<article class="product-card product-stay reveal" style="transition-delay:.08s">
+<div class="product-visual product-visual-photo">
+<img alt="Modern residential home at dusk" class="product-photo" decoding="async" loading="lazy" src="assets/home-local/img-98e7a806a8.webp"/>
+<div class="image-glass-label">LIVING / CONNECTED</div>
+</div>
+<div class="product-card-copy">
+<div class="product-top">
+<div class="product-name">Nentric Stay</div>
+<div class="product-badge">Living</div>
+</div>
+<p>A calmer residential experience that connects homes, household access, guest visits, services and everyday living around one connected layer.</p>
+<a class="product-open" href="stay.html">Explore Stay <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+<article class="product-card product-command reveal" style="transition-delay:.16s">
+<div class="product-visual product-visual-photo">
+<img alt="Nentric Command estate access and security environment" class="product-photo" decoding="async" loading="lazy" src="assets/home-local/img-281bcea047.webp"/>
+<div class="image-glass-label">INSTITUTIONS / CONTROL</div>
+</div>
+<div class="product-card-copy">
+<div class="product-top">
+<div class="product-name">Nentric Command</div>
+<div class="product-badge">Institutions</div>
+</div>
+<p>An institutional operations platform that connects people, authority, access, movement, responsibility and proof across controlled environments.</p>
+<a class="product-open" href="command.html">Explore Command <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+</div>
+<div class="product-deep-grid reveal">
+<article class="deep-card deep-flow">
+<div class="deep-image"><img alt="Contemporary building exterior" decoding="async" loading="lazy" src="assets/home-local/img-750aca58c5.webp"/></div>
+<div class="deep-content">
+<h3>Access becomes a shared event, not a gate transaction.</h3>
+<p>Flow is designed around the complete access journey: who is arriving, who invited them, why they are there, what the security team needs to verify and what should happen after entry. Instead of treating access as a single yes or no, it keeps the people and context around the event visible.</p>
+<div class="deep-points"><span>Guest invites</span><span>Identity &amp; verification</span><span>Security workflow</span><span>Access history</span></div>
+</div>
+</article>
+<article class="deep-card deep-stay">
+<div class="deep-image"><img alt="Luxury connected home interior" decoding="async" loading="lazy" src="assets/home-local/img-98e7a806a8.webp"/></div>
+<div class="deep-content">
+<h3>Residential technology should feel like part of the home.</h3>
+<p>Stay brings the recurring moments around a residence into one calmer experience. From household access and guest visits to estate services and everyday requests, the goal is to reduce the number of disconnected touchpoints residents have to navigate.</p>
+<div class="deep-points"><span>Resident experience</span><span>Household access</span><span>Guest management</span><span>Estate services</span></div>
+</div>
+</article>
+<article class="deep-card deep-command">
+<div class="deep-image"><img alt="Nentric Command institutional operations environment" decoding="async" loading="lazy" src="assets/home-local/img-281bcea047.webp"/></div>
+<div class="deep-content">
+<h3>Institutions need context, authority and proof in the same system.</h3>
+<p>Command connects identity, authority, access, movement and proof across a complex institution. It is designed to work alongside the systems an organisation already runs, giving teams a clearer operational layer without asking them to replace everything at once.</p>
+<div class="deep-points"><span>Identity &amp; authority</span><span>Operational visibility</span><span>Movement context</span><span>Audit &amp; proof</span></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="system-section" id="thinking">
+<div class="shell system-inner">
+<div class="reveal">
+<h2 class="display">The experience changes. The thinking stays connected.</h2>
+<p class="system-copy">Across Nentric products, we keep returning to the same questions. Who is involved? What is allowed? Where is it happening? What is changing? What happens next? The interface can be different, but the logic stays clear.</p>
+</div>
+<div aria-label="Illustration of connected Nentric system layers" class="system-stage reveal" style="transition-delay:.12s">
+<img alt="Modern operations environment" class="system-photo" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=88"/>
+<div class="system-photo-overlay"></div>
+<div class="stage-grid"></div>
+<div class="stage-line line-1"></div><div class="stage-line line-2"></div><div class="stage-line line-3"></div><div class="stage-line line-4"></div>
+<div class="stage-node node-a">People</div>
+<div class="stage-node node-b">Places</div>
+<div class="stage-node node-c">Permission</div>
+<div class="stage-node node-d">State</div>
+<div class="stage-node node-core">Nentric<br/>Core</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="shell">
+<div class="section-head reveal">
+<h2>See it in the real world.</h2>
+<p>We design around the moments where a system has to work quickly, clearly and without asking people to think like software engineers.</p>
+</div>
+<div class="stories">
+<article class="story story-light reveal">
+<div class="story-media"><img alt="Nentric Flow access environment" decoding="async" loading="lazy" src="assets/home-local/img-750aca58c5.webp"/></div>
+<div class="story-copy">
+<h3>A guest arrives. Everyone knows what happens next.</h3>
+<p>Flow connects the resident, host, security team and visitor around one clear access event.</p>
+</div>
+</article>
+<article class="story story-dark reveal" style="transition-delay:.08s">
+<div class="story-media"><img alt="Nentric Command institutional access environment" decoding="async" loading="lazy" src="assets/home-local/img-281bcea047.webp"/></div>
+<div class="story-copy">
+<h3>A person moves. The institution keeps the context.</h3>
+<p>Command explores the deeper side of movement: authority, responsibility, handoff, continuity and proof.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="interactive">
+<div class="shell">
+<div class="section-head reveal">
+<h2>Pick a product. See the idea behind it.</h2>
+<p>An interactive product view keeps the parent company site useful without turning it into a long product brochure.</p>
+</div>
+<div class="explorer reveal">
+<div aria-label="Product explorer" class="explorer-nav" role="tablist">
+<button aria-selected="true" class="explorer-tab active" data-tab="flow" role="tab"><strong>Nentric Flow</strong><span>Access that moves.</span></button>
+<button aria-selected="false" class="explorer-tab" data-tab="stay" role="tab"><strong>Nentric Stay</strong><span>Home, connected.</span></button>
+<button aria-selected="false" class="explorer-tab" data-tab="command" role="tab"><strong>Nentric Command</strong><span>For institutions in motion.</span></button>
+</div>
+<div class="explorer-view" id="explorerView">
+<div class="eyebrow" id="explorerEyebrow">Nentric Flow</div>
+<h3 id="explorerTitle">Access that moves.</h3>
+<p id="explorerCopy">A modern access experience for estates, offices and communities. Residents can invite, security can verify, and everyone sees the state of the visit.</p>
+<div class="explorer-scene" id="explorerScene">
+<img alt="Nentric Flow environment" class="explorer-image" decoding="async" id="explorerImage" loading="lazy" src="assets/home-local/img-750aca58c5.webp"/>
+<div class="explorer-image-shade"></div>
+<div class="scene-stack" id="sceneStack">
+<div class="scene-card"><span>Guest arrival</span><span class="scene-pill"></span></div>
+<div class="scene-card"><span>Host notified</span><span class="scene-pill"></span></div>
+<div class="scene-card"><span>Access verified</span><span class="scene-pill"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="shell">
+<div class="section-head reveal">
+<h2>We care about the details people actually feel.</h2>
+<p>The best systems disappear into a good experience. They should be clear when things are normal and useful when they are not.</p>
+</div>
+<div class="principles">
+<article class="principle reveal"><div class="principle-mark"></div><strong>Human first</strong><p>Interfaces should fit the person using them, not force everyone into one complicated workflow.</p></article>
+<article class="principle reveal" style="transition-delay:.08s"><div class="principle-mark"></div><strong>Real context</strong><p>A person, place, time and purpose matter. Good software keeps that context together.</p></article>
+<article class="principle reveal" style="transition-delay:.16s"><div class="principle-mark"></div><strong>Quiet confidence</strong><p>We prefer thoughtful motion, useful feedback and strong hierarchy over visual noise.</p></article>
+<article class="principle reveal" style="transition-delay:.24s"><div class="principle-mark"></div><strong>Built to grow</strong><p>Products should start narrow, prove value and expand without losing the clarity that made them useful.</p></article>
+</div>
+</div>
+</section>
+<section class="section faq-section" id="faq">
+<div class="shell">
+<div class="section-head reveal"><div><p class="eyebrow">FAQ</p><h2>Frequently asked questions.</h2></div><p>A clear place to understand what Nentric is building and where each product fits.</p></div>
+<div class="faq-list">
+<details open><summary>What is Clannit and how does it work?</summary><p>Nentric is a technology company that builds digital infrastructure to manage how people, access, and responsibilities connect across different environments. At the core is the <strong>Nentric engine</strong>, a framework that consistently answers key questions: who, where, what, why, when, and what happens next.</p><p>This engine powers live solutions across sectors, from workplace technology to hospitality and restaurants, ensuring seamless flows of access, approval, and movement. The same foundation adapts to each setting, enabling Nentric to deliver reliable products today while expanding into new directions as they mature.</p></details>
+<details><summary>Is my data safe with Nentric?</summary><p>Nentric only collects what a workflow needs to function, such as visitor and access details for Flow. The site does not run marketing or analytics cookies, and there is a plain language privacy notice on the site explaining what is collected and why.</p></details>
+<details><summary>Can I customize the platform for my specific community needs?</summary><p>Yes! Nentric is designed to be flexible and customizable. You can configure access controls, communication channels, and features based on your community's unique requirements. Our team also provides setup assistance to ensure the platform works perfectly for your specific use case.</p></details>
+<details><summary>What kind of spaces does Flow work for?</summary><p>Its first home is residential estates, but the architecture extends to offices, schools, hotels, construction sites and events, anywhere someone needs to move through a controlled space with context instead of a phone cal</p></details>
+<details><summary>How do I get started?</summary><p>Use the contact page and tell us about your space and the problem you are trying to solve. Someone from Nentric will follow up directly.</p></details>
+<details><summary>What kind of support do you provide?</summary><p>We offer comprehensive support including 24/7 technical assistance, onboarding guidance, training resources, and dedicated account management. Our support team is always ready to help you get the most out of Nentric platforms.</p></details>
+</div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="shell contact-grid">
+<div class="contact-copy reveal">
+<h2>Have a real problem worth building around?</h2>
+<p>Tell us what you are trying to make easier. We are interested in the messy parts of real environments, the parts that people keep solving by workarounds.</p>
+<div class="contact-meta">
+<div class="meta-row"><div class="meta-icon">@</div><div><strong>Email</strong><span>hello@nentric.com</span></div></div>
+<div class="meta-row"><div class="meta-icon">N</div><div><strong>Nentric Technologies Ltd</strong><span>Lagos, Nigeria</span></div></div>
+</div>
+</div>
+<div class="contact-card reveal" style="transition-delay:.12s">
+<h3>Start a conversation</h3>
+<form id="contactForm" novalidate="">
+<div class="field"><label for="name">Name</label><input autocomplete="name" id="name" name="name" required="" type="text"/></div>
+<div class="field"><label for="email">Email</label><input autocomplete="email" id="email" name="email" required="" type="email"/></div>
+<div class="field"><label for="company">Organisation</label><input autocomplete="organization" id="company" name="company" type="text"/></div>
+<div class="field"><label for="message">What are you working through?</label><textarea id="message" name="message" required=""></textarea></div>
+<div class="form-foot"><p class="form-note">Your enquiry is sent directly to the Nentric team.</p><button class="btn btn-primary" type="submit">Send enquiry</button></div>
+<div class="success" id="successMessage" role="status">Your enquiry will appear here once sent.</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<section aria-label="Legal and policy information" class="footer-policy" id="legal">
+<div class="shell">
+<div id="privacy"><strong>Privacy</strong><span>Nentric privacy information will appear here.</span></div>
+<div id="terms"><strong>Terms</strong><span>Nentric terms of use will appear here.</span></div>
+<div id="cookies"><strong>Cookies</strong><span>Nentric cookie information will appear here.</span></div>
+</div>
+</section>
+<footer>
+<div class="shell">
+<div class="footer-grid">
+<div class="footer-about">
+<div class="footer-brand-row">
+<img alt="Nentric logo mark" class="brand-mark" decoding="async" src="assets/nentric_mark.png"/>
+<img alt="Nentric" class="brand-wordmark" decoding="async" src="assets/nentric_wordmark.png"/>
+</div>
+<p>Technology for a more connected tomorrow. Nentric builds intelligent systems for people, places and movement.</p>
+<div aria-label="Social media" class="footer-socials">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/nentric-tech" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.8-2.03-5.57-4.74-5.57-2.18 0-3.15 1.2-3.69 2.04v-1.82H9.08V21h3.49v-6.19c0-1.63.31-3.2 2.32-3.2 1.97 0 1.99 1.85 1.99 3.3V21H21v-7.15Z"></path></svg></a>
+<a aria-label="Instagram" href="https://www.instagram.com/techbynentric" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.4 3h9.2A4.4 4.4 0 0 1 21 7.4v9.2a4.4 4.4 0 0 1-4.4 4.4H7.4A4.4 4.4 0 0 1 3 16.6V7.4A4.4 4.4 0 0 1 7.4 3Zm0 2A2.4 2.4 0 0 0 5 7.4v9.2A2.4 2.4 0 0 0 7.4 19h9.2a2.4 2.4 0 0 0 2.4-2.4V7.4A2.4 2.4 0 0 0 16.6 5H7.4Zm4.6 2.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Zm5-2.25a1.1 1.1 0 1 1-1.1 1.1 1.1 0 0 1-1.1 1.1 1.1 0 0 1 1.1-1.1Z"></path></svg></a>
+<a aria-label="Linktree" href="https://linktr.ee/nentric" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11 3h2v7.17l3.6-3.6 1.41 1.42L14.41 12H20v2h-5.59l3.6 3.6-1.41 1.41-3.6-3.6V21h-2v-7.59l-3.6 3.6-1.41-1.41 3.6-3.6H4v-2h5.59L6 7.99 7.41 6.57 11 10.17V3Z"></path></svg></a>
+</div>
+</div>
+<div class="footer-column">
+<div class="footer-kicker">Explore</div>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="index.html#thinking">How we think</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+<div class="footer-column">
+<div class="footer-kicker">Businesses</div>
+<a href="flow.html">Nentric Flow</a>
+<a href="stay.html">Nentric Stay</a>
+<a href="command.html">Nentric Command</a>
+<a href="contact.html">Partnerships</a>
+<a href="contact.html">Careers</a>
+</div>
+<div class="footer-column">
+<div class="footer-kicker newsletter-title">Stay connected</div>
+<p class="newsletter-copy">Get occasional updates from Nentric. Product news, ideas and company updates.</p>
+<form class="newsletter-form" id="newsletterForm">
+<input aria-label="Work email" name="newsletterEmail" placeholder="Work email" required="" type="email"/>
+<button type="submit">Join</button>
+</form>
+<div class="success" id="newsletterSuccess"></div>
+</div>
+</div>
+<div class="footer-bottom">
+<small>© 2026 Nentric Technologies Ltd. All rights reserved.</small>
+<div class="footer-legal">
+<a href="legal.html">Legal</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="cookies.html">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+<style id="multipage-v12-home-visual-fixes">
+/* V12: targeted visual corrections only. Preserve the existing homepage layout and assets. */
+.product-flow .product-photo{object-fit:cover!important;padding:0!important;background:#101010!important}
+.product-flow .product-visual{background:#101010!important}
+
+/* The explorer keeps one visual language in either site theme. */
+.explorer-view,
+.explorer-view.command,
+.explorer-view.stay{background:var(--surface-strong)!important;color:var(--text)!important}
+.explorer-scene{min-width:0!important;min-height:0!important;background:rgba(255,255,255,.52)!important}
+.explorer-image{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+body.dark-theme .explorer-view,
+body.dark-theme .explorer-view.command,
+body.dark-theme .explorer-view.stay{background:rgba(255,255,255,.075)!important;color:#fff!important}
+body.dark-theme .explorer-scene{background:rgba(255,255,255,.055)!important;border-color:rgba(255,255,255,.13)!important}
+body.dark-theme #explorerTitle{color:#fff!important}
+body.dark-theme #explorerCopy{color:rgba(255,255,255,.82)!important}
+
+/* How we think: the visual remains the full-width leading block on mobile. */
+#thinking .system-stage{position:relative!important;overflow:hidden!important}
+#thinking .system-photo{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+body.dark-theme #thinking .system-photo{opacity:.62!important}
+@media(max-width:900px){
+  #thinking .system-inner{display:flex!important;flex-direction:column!important;align-items:stretch!important}
+  #thinking .system-stage{order:1!important;width:100%!important}
+  #thinking .system-inner > .reveal:first-child{order:2!important}
+  #thinking .system-stage,#thinking .system-stage img{max-width:100%!important}
+  .deep-card,.deep-card:nth-child(even){grid-template-columns:1fr!important}
+  .deep-card:nth-child(even) .deep-image{order:0!important}
+  .deep-image{width:100%!important;min-width:0!important}
+  .deep-image img{display:block!important;width:100%!important;height:100%!important;min-height:300px!important;object-fit:cover!important;object-position:center!important}
+}
+@media(max-width:620px){
+  #thinking .system-stage{height:clamp(320px,82vw,390px)!important;min-height:320px!important;border-radius:26px!important}
+  .explorer-view{padding:14px!important}
+  .explorer-scene{width:100%!important;min-width:0!important}
+  .explorer-image{height:100%!important}
+}
+</style>
+<script defer="" src="assets/home.js"></script>
+
+<style id="final-home-fixes">
+/* Remove all visible section numbering */
+.deep-index{display:none!important}
+/* Testimonials */
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testimonial-card{padding:30px;border-radius:28px;border:1px solid var(--glass-border);background:var(--surface);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%);box-shadow:var(--glass-shadow)}
+.testimonial-status{font-size:9px;letter-spacing:.16em;color:var(--sunfire);font-weight:700}
+.testimonial-card blockquote{margin:28px 0 18px;font-size:24px;line-height:1.12;letter-spacing:-.035em;color:var(--text)}
+.testimonial-card p{margin:0;color:var(--muted2);font-size:14px;line-height:1.55}
+/* FAQ */
+.faq-section{padding-top:30px}
+.faq-list{display:grid;gap:10px;max-width:980px}
+.faq-list details{border:1px solid var(--glass-border);border-radius:20px;background:var(--surface);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);overflow:hidden}
+.faq-list summary{list-style:none;cursor:pointer;padding:22px 24px;font-size:18px;font-weight:600;color:var(--text);display:flex;justify-content:space-between;align-items:center}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';font-size:22px;font-weight:400;color:var(--sunfire)}
+.faq-list details[open] summary::after{content:'−'}
+.faq-list details p{padding:0 24px 24px;margin:0;max-width:760px;color:var(--muted2);line-height:1.65}
+body.dark-theme .testimonial-card,body.dark-theme .faq-list details{background:rgba(255,255,255,.065)!important;border-color:rgba(255,255,255,.14)!important}
+body.dark-theme .testimonial-card blockquote,body.dark-theme .faq-list summary{color:#f7f5f0!important}
+body.dark-theme .testimonial-card p,body.dark-theme .faq-list details p{color:rgba(255,255,255,.66)!important}
+body.dark-theme .faq-list summary::after{color:var(--sunfire)!important}
+@media(max-width:900px){.testimonial-grid{grid-template-columns:1fr}}
+</style>
+
+<style id="nentric-final-theme-text-fix">
+/* Final theme pass: every informational text element follows the active theme. */
+body.dark-theme .eyebrow,
+body.dark-theme .hero-copy,
+body.dark-theme .intro-copy,
+body.dark-theme .section-head p,
+body.dark-theme .explorer-tab strong,
+body.dark-theme .explorer-view h3,
+body.dark-theme .principle strong,
+body.dark-theme .contact-copy h2,
+body.dark-theme .contact-card h3,
+body.dark-theme .field label,
+body.dark-theme .meta-row strong,
+body.dark-theme .testimonial-card h3,
+body.dark-theme .faq-list summary,
+body.dark-theme .faq-list details,
+body.dark-theme .faq-question,
+body.dark-theme .faq-answer h3{color:#f7f5f0!important}
+body.dark-theme .hero-copy,
+body.dark-theme .intro-copy,
+body.dark-theme .explorer-tab span,
+body.dark-theme .explorer-view p,
+body.dark-theme .principle p,
+body.dark-theme .contact-copy p,
+body.dark-theme .meta-row span,
+body.dark-theme .field label,
+body.dark-theme .testimonial-card p,
+body.dark-theme .testimonial-card small,
+body.dark-theme .faq-answer,
+body.dark-theme .faq-answer p{color:rgba(255,255,255,.68)!important}
+body.dark-theme .hero-chip{background:rgba(255,255,255,.07)!important;border-color:rgba(255,255,255,.14)!important;color:#fff!important}
+body.dark-theme .hero-chip strong,body.dark-theme .hero-chip span{color:#fff!important}
+body.dark-theme .hero-chip span{color:rgba(255,255,255,.68)!important}
+body.dark-theme .scene-card{color:#fff!important}
+body.dark-theme .explorer-tab{color:#fff!important}
+body.dark-theme .contact-card{color:#fff!important}
+</style>
+
+
+<style id="nentric-home-testimonial-image-corrections">
+.hero-photo{background-image:url('assets/home-local/hero-bright-upload.png')!important;background-position:center 52%!important}
+body.dark-theme .hero-photo{background-image:url('assets/home-local/img-598b597a80-clean.webp')!important;background-position:center 54%!important}
+.testimonials-slider-section{padding-top:56px;padding-bottom:96px}
+.testimonial-slider{position:relative;max-width:980px;margin:0 auto;outline:none}
+.testimonial-viewport{position:relative;min-height:330px;overflow:hidden}
+.testimonial-slide{display:none;min-height:330px;padding:34px 70px 24px;text-align:center;align-items:center;justify-content:center;flex-direction:column}
+.testimonial-slide.active{display:flex;animation:testimonialFade .35s ease}
+.testimonial-slide blockquote{margin:0;max-width:850px;font-size:clamp(28px,4vw,52px);line-height:1.08;letter-spacing:-.045em;color:var(--text);font-weight:400}
+.testimonial-slide p{display:flex;align-items:center;justify-content:center;gap:12px;margin:30px 0 0;color:var(--muted2);font-size:13px;letter-spacing:.04em}
+.testimonial-slide p strong{color:var(--text);font-weight:600}
+.testimonial-slide p span{padding-left:12px;border-left:1px solid currentColor}
+.testimonial-controls{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:20px}
+.testimonial-arrow{width:42px;height:42px;border-radius:50%;border:1px solid var(--glass-border);background:transparent;color:var(--text);font-size:20px;display:grid;place-items:center;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.testimonial-arrow:hover{transform:translateY(-1px);background:var(--surface)}
+.testimonial-dots{display:flex;align-items:center;gap:8px}
+.testimonial-dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#b9b9b9;opacity:.55;cursor:pointer}
+.testimonial-dot.active{width:24px;border-radius:99px;background:var(--sunfire);opacity:1}
+body.dark-theme .testimonial-slide blockquote{color:#fff}
+body.dark-theme .testimonial-slide p strong{color:#fff}
+body.dark-theme .testimonial-arrow{color:#fff;border-color:rgba(255,255,255,.18)}
+body.dark-theme .testimonial-dot{background:rgba(255,255,255,.45)}
+@keyframes testimonialFade{from{opacity:.15;transform:translateX(16px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:620px){.testimonial-viewport,.testimonial-slide{min-height:390px}.testimonial-slide{padding:28px 18px 20px}.testimonial-slide blockquote{font-size:clamp(26px,7.2vw,36px)}.testimonial-slide p{margin-top:24px;flex-wrap:wrap}.testimonial-controls{margin-top:4px}}
+</style>
+
+</body>
+</html><style id="nentric-home-theme-fixes">
+/* Homepage only: social icons follow the active theme. */
+.footer-socials a{color:#111!important}
+.footer-socials a svg{fill:currentColor!important}
+body.dark-theme .footer-socials a{color:#fff!important}
+/* Homepage only: keep Command copy readable in the bright theme. */
+body:not(.dark-theme) .deep-command .deep-content h3{color:#111!important}
+body:not(.dark-theme) .deep-command .deep-content p{color:#5f5f5f!important}
+body:not(.dark-theme) .deep-command .deep-points span{color:#333!important}
+</style>
